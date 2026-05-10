@@ -95,7 +95,7 @@ export default function ProductPage() {
           <span className="text-sm text-[#8B949E] truncate">{product.brand} {product.name}</span>
         </div>
 
-        {/* ─── PRODUCT HEADER ─── */}
+        {/* PRODUCT HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
           {/* Image Gallery */}
           <div>
@@ -103,7 +103,11 @@ export default function ProductPage() {
               <img
                 src={product.images[activeImage]}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain p-4"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src =
+                    `https://placehold.co/600x400/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+                }}
               />
               {product.images.length > 1 && (
                 <>
@@ -135,7 +139,15 @@ export default function ProductPage() {
                     onClick={() => setActiveImage(i)}
                     className={`w-16 h-12 rounded-lg overflow-hidden border-2 transition-colors ${activeImage === i ? 'border-[#00D4AA]' : 'border-[#30363D]'}`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img
+                      src={img}
+                      alt=""
+                      className="w-full h-full object-contain p-1"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src =
+                          `https://placehold.co/64x48/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+                      }}
+                    />
                   </button>
                 ))}
               </div>
@@ -200,8 +212,10 @@ export default function ProductPage() {
 
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <a
+              
                 href={product.prices[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00D4AA] text-[#0D1117] font-bold hover:bg-[#00D4AA]/90 transition-colors"
               >
                 <ShoppingCart size={16} />
@@ -235,16 +249,18 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* ─── PRICE COMPARISON ─── */}
+        {/* PRICE COMPARISON */}
         <div className="mb-10">
           <h2 className="text-lg font-semibold text-[#E6EDF3] mb-4">Price Comparison</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {product.prices.map(p => {
               const isLowest = p.price === lowestPrice;
               return (
-                <a
+                
                   key={p.store}
                   href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`relative bg-[#161B22] border rounded-2xl p-4 hover:scale-[1.02] transition-all ${
                     isLowest ? 'border-[#00D4AA]/60' : 'border-[#30363D]'
                   }`}
@@ -270,7 +286,7 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* ─── TABS ─── */}
+        {/* TABS */}
         <div className="mb-10">
           <div className="flex gap-1 bg-[#161B22] border border-[#30363D] rounded-2xl p-1 overflow-x-auto">
             {tabs.map(tab => (
@@ -339,7 +355,6 @@ export default function ProductPage() {
             {/* Reviews */}
             {activeTab === 'reviews' && (
               <div className="space-y-6">
-                {/* Sentiment */}
                 <div className="bg-[#161B22] border border-[#30363D] rounded-2xl p-6">
                   <h3 className="font-semibold text-[#E6EDF3] mb-5">Consumer Sentiment</h3>
                   <div className="space-y-3">
@@ -365,7 +380,6 @@ export default function ProductPage() {
                   </div>
                 </div>
 
-                {/* Positive reviews */}
                 <div>
                   <h3 className="flex items-center gap-2 font-semibold text-[#E6EDF3] mb-4">
                     <ThumbsUp size={16} className="text-[#3FB950]" />
@@ -400,7 +414,6 @@ export default function ProductPage() {
                   </div>
                 </div>
 
-                {/* Negative reviews */}
                 {negativeReviews.length > 0 && (
                   <div>
                     <h3 className="flex items-center gap-2 font-semibold text-[#E6EDF3] mb-4">
@@ -480,7 +493,7 @@ export default function ProductPage() {
         </div>
       </main>
 
-      {/* ─── ALL REVIEWS MODAL ─── */}
+      {/* ALL REVIEWS MODAL */}
       {showAllReviews && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
