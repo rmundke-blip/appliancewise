@@ -208,7 +208,7 @@ export default function ProductPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               
-                href={product.prices[0].url}
+                 href={product.prices[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00D4AA] text-[#0D1117] font-bold hover:bg-[#00D4AA]/90 transition-colors"
@@ -246,7 +246,7 @@ export default function ProductPage() {
               const isLowest = p.price === lowestPrice;
               return (
                 
-                  key={p.store}
+                 key={p.store}
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
