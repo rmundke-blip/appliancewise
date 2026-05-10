@@ -75,7 +75,7 @@ export default function ProductPage() {
   const tabs = [
     { id: 'overview', label: 'Overview' },
     { id: 'specs', label: 'Specifications' },
-    { id: 'reviews', label: `Reviews (${product.reviewCount.toLocaleString('en-IN')})` },
+    { id: 'reviews', label: 'Reviews (' + product.reviewCount.toLocaleString('en-IN') + ')' },
     { id: 'compare', label: 'Compare' },
   ] as const;
 
@@ -84,9 +84,9 @@ export default function ProductPage() {
       <Navbar />
 
       <main className="pt-20 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
-        {/* Back + Breadcrumb */}
+
         <div className="flex items-center gap-3 mb-8 mt-4">
-          <Link href={`/category/${product.categorySlug}`}
+          <Link href={'/category/' + product.categorySlug}
             className="flex items-center gap-1.5 text-sm text-[#8B949E] hover:text-[#00D4AA] transition-colors">
             <ArrowLeft size={16} />
             Back to {product.category}
@@ -95,9 +95,8 @@ export default function ProductPage() {
           <span className="text-sm text-[#8B949E] truncate">{product.brand} {product.name}</span>
         </div>
 
-        {/* PRODUCT HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
-          {/* Image Gallery */}
+
           <div>
             <div className="relative bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden aspect-[4/3]">
               <img
@@ -105,8 +104,8 @@ export default function ProductPage() {
                 alt={product.name}
                 className="w-full h-full object-contain p-4"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    `https://placehold.co/600x400/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+                  const target = e.target as HTMLImageElement;
+                  target.src = 'https://placehold.co/600x400/1F2937/00D4AA?text=' + encodeURIComponent(product.brand);
                 }}
               />
               {product.images.length > 1 && (
@@ -137,15 +136,15 @@ export default function ProductPage() {
                   <button
                     key={i}
                     onClick={() => setActiveImage(i)}
-                    className={`w-16 h-12 rounded-lg overflow-hidden border-2 transition-colors ${activeImage === i ? 'border-[#00D4AA]' : 'border-[#30363D]'}`}
+                    className={'w-16 h-12 rounded-lg overflow-hidden border-2 transition-colors ' + (activeImage === i ? 'border-[#00D4AA]' : 'border-[#30363D]')}
                   >
                     <img
                       src={img}
                       alt=""
                       className="w-full h-full object-contain p-1"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src =
-                          `https://placehold.co/64x48/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+                        const target = e.target as HTMLImageElement;
+                        target.src = 'https://placehold.co/64x48/1F2937/00D4AA?text=' + encodeURIComponent(product.brand);
                       }}
                     />
                   </button>
@@ -154,7 +153,6 @@ export default function ProductPage() {
             )}
           </div>
 
-          {/* Product Info */}
           <div className="flex flex-col gap-4">
             <div>
               <p className="text-sm text-[#00D4AA] font-semibold uppercase tracking-wider mb-1">{product.brand}</p>
@@ -178,7 +176,6 @@ export default function ProductPage() {
               </div>
             </div>
 
-            {/* Price */}
             <div className="bg-[#161B22] border border-[#30363D] rounded-2xl p-5">
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="text-3xl font-bold text-[#E6EDF3]">{formatPrice(product.price)}</span>
@@ -197,7 +194,6 @@ export default function ProductPage() {
               </p>
             </div>
 
-            {/* Highlights */}
             <div>
               <p className="text-sm font-semibold text-[#E6EDF3] mb-3">Key Highlights</p>
               <ul className="space-y-2">
@@ -210,7 +206,6 @@ export default function ProductPage() {
               </ul>
             </div>
 
-            {/* Action buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               
                 href={product.prices[0].url}
@@ -223,11 +218,7 @@ export default function ProductPage() {
               </a>
               <button
                 onClick={handleCompare}
-                className={`flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border font-semibold text-sm transition-all ${
-                  inCompare
-                    ? 'bg-[#00D4AA]/15 text-[#00D4AA] border-[#00D4AA]/40'
-                    : 'bg-transparent text-[#8B949E] border-[#30363D] hover:text-[#00D4AA] hover:border-[#00D4AA]/40'
-                }`}
+                className={'flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border font-semibold text-sm transition-all ' + (inCompare ? 'bg-[#00D4AA]/15 text-[#00D4AA] border-[#00D4AA]/40' : 'bg-transparent text-[#8B949E] border-[#30363D] hover:text-[#00D4AA] hover:border-[#00D4AA]/40')}
               >
                 <GitCompare size={16} />
                 {inCompare ? 'Added to Compare' : 'Add to Compare'}
@@ -235,7 +226,6 @@ export default function ProductPage() {
             </div>
             {compareMsg && <p className="text-xs text-[#F85149] bg-[#F85149]/10 rounded-lg px-3 py-2">{compareMsg}</p>}
 
-            {/* Trust */}
             <div className="flex gap-4 pt-1">
               <div className="flex items-center gap-1.5 text-xs text-[#8B949E]">
                 <Shield size={13} className="text-[#00D4AA]" />
@@ -249,7 +239,6 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* PRICE COMPARISON */}
         <div className="mb-10">
           <h2 className="text-lg font-semibold text-[#E6EDF3] mb-4">Price Comparison</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -261,9 +250,7 @@ export default function ProductPage() {
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`relative bg-[#161B22] border rounded-2xl p-4 hover:scale-[1.02] transition-all ${
-                    isLowest ? 'border-[#00D4AA]/60' : 'border-[#30363D]'
-                  }`}
+                  className={'relative bg-[#161B22] border rounded-2xl p-4 hover:scale-[1.02] transition-all ' + (isLowest ? 'border-[#00D4AA]/60' : 'border-[#30363D]')}
                 >
                   {isLowest && (
                     <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-[#00D4AA] text-[#0D1117] text-[10px] font-bold whitespace-nowrap">
@@ -272,7 +259,7 @@ export default function ProductPage() {
                   )}
                   <div className="text-2xl mb-2 text-center">{storeLogos[p.store]}</div>
                   <p className="text-[#E6EDF3] font-semibold text-center text-sm mb-0.5">{p.store}</p>
-                  <p className={`text-center font-bold text-lg ${isLowest ? 'text-[#00D4AA]' : 'text-[#E6EDF3]'}`}>
+                  <p className={'text-center font-bold text-lg ' + (isLowest ? 'text-[#00D4AA]' : 'text-[#E6EDF3]')}>
                     {formatPrice(p.price)}
                   </p>
                   <p className="text-[#8B949E] text-xs text-center mt-1">{p.delivery}</p>
@@ -286,18 +273,13 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* TABS */}
         <div className="mb-10">
           <div className="flex gap-1 bg-[#161B22] border border-[#30363D] rounded-2xl p-1 overflow-x-auto">
             {tabs.map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 py-2.5 px-4 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${
-                  activeTab === tab.id
-                    ? 'bg-[#00D4AA] text-[#0D1117]'
-                    : 'text-[#8B949E] hover:text-[#E6EDF3]'
-                }`}
+                className={'flex-1 py-2.5 px-4 rounded-xl text-sm font-medium whitespace-nowrap transition-all ' + (activeTab === tab.id ? 'bg-[#00D4AA] text-[#0D1117]' : 'text-[#8B949E] hover:text-[#E6EDF3]')}
               >
                 {tab.label}
               </button>
@@ -305,7 +287,7 @@ export default function ProductPage() {
           </div>
 
           <div className="mt-6">
-            {/* Overview */}
+
             {activeTab === 'overview' && (
               <div className="space-y-6">
                 <div className="bg-[#161B22] border border-[#30363D] rounded-2xl p-6">
@@ -335,7 +317,6 @@ export default function ProductPage() {
               </div>
             )}
 
-            {/* Specifications */}
             {activeTab === 'specs' && (
               <div className="bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
                 <div className="p-5 border-b border-[#30363D]">
@@ -352,7 +333,6 @@ export default function ProductPage() {
               </div>
             )}
 
-            {/* Reviews */}
             {activeTab === 'reviews' && (
               <div className="space-y-6">
                 <div className="bg-[#161B22] border border-[#30363D] rounded-2xl p-6">
@@ -368,8 +348,8 @@ export default function ProductPage() {
                         <span className="text-[#8B949E] text-sm w-16 flex-shrink-0">{item.label}</span>
                         <div className="flex-1 bg-[#0D1117] rounded-full h-2.5 overflow-hidden">
                           <div
-                            className={`h-full rounded-full ${item.barBg} transition-all duration-1000`}
-                            style={{ width: `${item.value}%` }}
+                            className={'h-full rounded-full ' + item.barBg + ' transition-all duration-1000'}
+                            style={{ width: item.value + '%' }}
                           />
                         </div>
                         <span className="text-sm font-semibold w-10 text-right" style={{ color: item.color }}>
@@ -459,7 +439,6 @@ export default function ProductPage() {
               </div>
             )}
 
-            {/* Compare tab */}
             {activeTab === 'compare' && (
               <div className="bg-[#161B22] border border-[#30363D] rounded-2xl p-8 text-center">
                 <GitCompare size={40} className="text-[#00D4AA] mx-auto mb-4" />
@@ -470,11 +449,7 @@ export default function ProductPage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button
                     onClick={handleCompare}
-                    className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all ${
-                      inCompare
-                        ? 'bg-[#00D4AA]/15 text-[#00D4AA] border border-[#00D4AA]/40'
-                        : 'bg-[#00D4AA] text-[#0D1117] hover:bg-[#00D4AA]/90'
-                    }`}
+                    className={'flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all ' + (inCompare ? 'bg-[#00D4AA]/15 text-[#00D4AA] border border-[#00D4AA]/40' : 'bg-[#00D4AA] text-[#0D1117] hover:bg-[#00D4AA]/90')}
                   >
                     <GitCompare size={16} />
                     {inCompare ? 'Added to Compare' : 'Add to Compare'}
@@ -489,11 +464,11 @@ export default function ProductPage() {
                 {compareMsg && <p className="text-xs text-[#F85149] mt-3">{compareMsg}</p>}
               </div>
             )}
+
           </div>
         </div>
       </main>
 
-      {/* ALL REVIEWS MODAL */}
       {showAllReviews && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
@@ -516,13 +491,7 @@ export default function ProductPage() {
               {product.reviews.map(review => (
                 <div
                   key={review.id}
-                  className={`border rounded-xl p-4 ${
-                    review.sentiment === 'positive'
-                      ? 'border-l-2 border-l-[#3FB950] border-[#30363D]'
-                      : review.sentiment === 'negative'
-                      ? 'border-l-2 border-l-[#F85149] border-[#30363D]'
-                      : 'border-[#30363D]'
-                  }`}
+                  className={'border rounded-xl p-4 ' + (review.sentiment === 'positive' ? 'border-l-2 border-l-[#3FB950] border-[#30363D]' : review.sentiment === 'negative' ? 'border-l-2 border-l-[#F85149] border-[#30363D]' : 'border-[#30363D]')}
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div>
