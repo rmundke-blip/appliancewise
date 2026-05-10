@@ -58,11 +58,15 @@ export default function ProductCard({ product, showCompare = true, compact = fal
 
       {/* Image */}
       <Link href={`/product/${product.id}`} className="block">
-        <div className={`relative overflow-hidden bg-gradient-to-br from-[#1F2937] to-[#111827] ${compact ? 'h-40' : 'h-52'}`}>
+        <div className={`relative overflow-hidden bg-gradient-to-br from-[#1F2937] to-[#111827] flex items-center justify-center ${compact ? 'h-40' : 'h-52'}`}>
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src =
+                `https://placehold.co/400x300/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#161B22]/30 to-transparent" />
         </div>
