@@ -86,8 +86,10 @@ export default function ProductPage() {
       <main className="pt-20 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
 
         <div className="flex items-center gap-3 mb-8 mt-4">
-          <Link href={'/category/' + product.categorySlug}
-            className="flex items-center gap-1.5 text-sm text-[#8B949E] hover:text-[#00D4AA] transition-colors">
+          <Link
+            href={'/category/' + product.categorySlug}
+            className="flex items-center gap-1.5 text-sm text-[#8B949E] hover:text-[#00D4AA] transition-colors"
+          >
             <ArrowLeft size={16} />
             Back to {product.category}
           </Link>
@@ -207,8 +209,8 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              
-                 href={product.prices[0].url}
+              <a
+                href={product.prices[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00D4AA] text-[#0D1117] font-bold hover:bg-[#00D4AA]/90 transition-colors"
@@ -245,8 +247,8 @@ export default function ProductPage() {
             {product.prices.map(p => {
               const isLowest = p.price === lowestPrice;
               return (
-                
-                 key={p.store}
+                <a
+                  key={p.store}
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
