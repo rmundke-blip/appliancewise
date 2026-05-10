@@ -206,7 +206,7 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <a
+              
                 href={product.prices[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -223,6 +223,14 @@ export default function ProductPage() {
                 {inCompare ? 'Added to Compare' : 'Add to Compare'}
               </button>
             </div>
+            {inCompare && (
+              <Link
+                href="/compare"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#00D4AA]/10 border border-[#00D4AA]/40 text-[#00D4AA] text-sm font-semibold hover:bg-[#00D4AA]/20 transition-colors"
+              >
+                ✅ Added! Click here to go to Compare Page →
+              </Link>
+            )}
             {compareMsg && <p className="text-xs text-[#F85149] bg-[#F85149]/10 rounded-lg px-3 py-2">{compareMsg}</p>}
 
             <div className="flex gap-4 pt-1">
