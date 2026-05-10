@@ -37,6 +37,7 @@ export default function Navbar() {
     : [];
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '/category/tvs', label: 'Appliances' },
     { href: '/recommend', label: 'AI Recommend' },
     { href: '/compare', label: 'Compare' },
