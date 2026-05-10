@@ -81,10 +81,10 @@ export const products: Product[] = [
       'Ambient Optimization for perfect picture in any room light',
     ],
     prices: [
-      { store: 'Flipkart', price: 62990, url: 'https://www.flipkart.com/search?q=Sony+Bravia+X75L+55+inch+4K', delivery: 'Free delivery in 2 days' },
-      { store: 'Amazon', price: 63990, url: 'https://www.amazon.in/s?k=Sony+Bravia+X75L+55+inch+4K+Smart+TV', delivery: 'Free delivery in 3 days' },
-      { store: 'Croma', price: 64990, url: 'https://www.croma.com/searchB?q=Sony+Bravia+X75L+55', delivery: 'Same day delivery available' },
-      { store: 'Reliance Digital', price: 65490, url: 'https://www.reliancedigital.in/search?q=Sony+Bravia+X75L+55', delivery: 'Free delivery in 4 days' },
+     { store: 'Flipkart', price: 62990, url: 'https://www.flipkart.com/sony-bravia-139-cm-55-inch-4k-ultra-hd-smart-led-google-tv-with-alexa-built-in/p/itmcb7a3dc0f4ced', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 63990, url: 'https://www.amazon.in/dp/B0C4MFW6GR', delivery: 'Free delivery in 3 days' },
+     { store: 'Croma', price: 64990, url: 'https://www.croma.com/sony-139cm-55-inch-4k-ultra-hd-smart-led-google-tv/p/265746', delivery: 'Same day delivery available' },
+     { store: 'Reliance Digital', price: 65490, url: 'https://www.reliancedigital.in/sony-139cm-55-4k-ultra-hd-smart-led-google-tv-kd-55x75l/p/493163640', delivery: 'Free delivery in 4 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Rajesh Kumar', rating: 5, title: 'Superb picture quality!', body: 'Bought this during Diwali sale. The picture quality is just outstanding. Even during our frequent voltage fluctuations in Jaipur, it handles perfectly with its automatic voltage adjustment. Google TV is very smooth and loads apps quickly.', date: '2024-01-15', sentiment: 'positive', verified: true },
@@ -138,10 +138,10 @@ export const products: Product[] = [
       'Q-Symphony compatible',
     ],
     prices: [
-      { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/search?q=Samsung+Crystal+4K+55+inch+CU8000', delivery: 'Free delivery in 2 days' },
-      { store: 'Amazon', price: 55490, url: 'https://www.amazon.in/s?k=Samsung+Crystal+4K+55+inch+Smart+TV', delivery: 'Free delivery in 2 days' },
-      { store: 'Croma', price: 56990, url: 'https://www.croma.com/searchB?q=Samsung+Crystal+4K+55', delivery: 'Free delivery in 3 days' },
-      { store: 'Reliance Digital', price: 57490, url: 'https://www.reliancedigital.in/search?q=Samsung+Crystal+4K+55+inch', delivery: 'Free delivery in 4 days' },
+    { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/samsung-138-cm-55-inch-4k-ultra-hd-smart-led-tv-2023-edition/p/itm012b2c5f4f75e', delivery: 'Free delivery in 2 days' },
+    { store: 'Amazon', price: 55490, url: 'https://www.amazon.in/dp/B0BVMZN8L3', delivery: 'Free delivery in 2 days' },
+    { store: 'Croma', price: 56990, url: 'https://www.croma.com/samsung-138cm-55-inch-crystal-4k-uhd-smart-led-tv/p/259786', delivery: 'Free delivery in 3 days' },
+    { store: 'Reliance Digital', price: 57490, url: 'https://www.reliancedigital.in/samsung-138cm-55-4k-ultra-hd-smart-led-tv-ua55cue80bklxl/p/493128933', delivery: 'Free delivery in 4 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Suresh Patel', rating: 5, title: 'Best Samsung TV I have owned', body: 'Third Samsung TV in our family and this is the best. Tizen OS is very smooth and all Indian OTT apps are pre-installed. During IPL, the auto game mode kicked in automatically. 4K content on Netflix and Disney+ looks breathtaking.', date: '2024-01-20', sentiment: 'positive', verified: true },
@@ -195,10 +195,10 @@ export const products: Product[] = [
       'Game Optimizer with VRR, ALLM, G-Sync Compatible',
     ],
     prices: [
-      { store: 'Flipkart', price: 71990, url: 'https://www.flipkart.com/search?q=LG+QNED80+55+inch+4K', delivery: 'Free delivery in 3 days' },
-      { store: 'Amazon', price: 72490, url: 'https://www.amazon.in/s?k=LG+QNED+55+inch+4K+Smart+TV', delivery: 'Free delivery in 2 days' },
-      { store: 'Croma', price: 73990, url: 'https://www.croma.com/searchB?q=LG+QNED+55+inch', delivery: 'Same day delivery available' },
-      { store: 'Reliance Digital', price: 74490, url: 'https://www.reliancedigital.in/search?q=LG+QNED+55+inch', delivery: 'Free delivery in 4 days' },
+     { store: 'Flipkart', price: 71990, url: 'https://www.flipkart.com/lg-139-cm-55-inch-qned-4k-ultra-hd-smart-led-google-tv/p/itm9de1a3ecb6af9', delivery: 'Free delivery in 3 days' },
+     { store: 'Amazon', price: 72490, url: 'https://www.amazon.in/dp/B0C8QN9FBM', delivery: 'Free delivery in 2 days' },
+     { store: 'Croma', price: 73990, url: 'https://www.croma.com/lg-139cm-55-inch-qned-4k-ultra-hd-smart-led-google-tv/p/264821', delivery: 'Same day delivery available' },
+     { store: 'Reliance Digital', price: 74490, url: 'https://www.reliancedigital.in/lg-139cm-55-qned-4k-ultra-hd-smart-led-google-tv-55qned80tsa/p/493137062', delivery: 'Free delivery in 4 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Aditya Kumar', rating: 5, title: 'Best purchase of 2024', body: 'Upgraded from an old 40 inch LED to this QNED and the difference is night and day. The NanoCell technology makes colors pop without looking artificial. webOS is the most intuitive smart TV interface I have used. Even during power fluctuations in Pune, the TV recovered perfectly.', date: '2024-02-01', sentiment: 'positive', verified: true },
@@ -251,10 +251,10 @@ export const products: Product[] = [
       'Works with OnePlus ecosystem devices',
     ],
     prices: [
-      { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=OnePlus+TV+Y1S+Pro+65+inch', delivery: 'Free delivery in 2 days' },
-      { store: 'Amazon', price: 51490, url: 'https://www.amazon.in/s?k=OnePlus+TV+Y1S+Pro+65+inch', delivery: 'Free delivery in 3 days' },
-      { store: 'Croma', price: 52990, url: 'https://www.croma.com/searchB?q=OnePlus+TV+Y1S+Pro+65', delivery: 'Free delivery in 4 days' },
-      { store: 'Reliance Digital', price: 53490, url: 'https://www.reliancedigital.in/search?q=OnePlus+TV+Y1S+Pro+65', delivery: 'Free delivery in 4 days' },
+     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/oneplus-tv-y1s-pro-164-cm-65-inch-ultra-hd-4k-smart-android-led-tv/p/itm697e80a5d9f82', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 51490, url: 'https://www.amazon.in/dp/B09QV7TV7Y', delivery: 'Free delivery in 3 days' },
+     { store: 'Croma', price: 52990, url: 'https://www.croma.com/oneplus-164cm-65-inch-4k-ultra-hd-smart-android-led-tv/p/234792', delivery: 'Free delivery in 4 days' },
+     { store: 'Reliance Digital', price: 53490, url: 'https://www.reliancedigital.in/oneplus-164cm-65-4k-ultra-hd-smart-android-led-tv-65y1s-pro/p/493082177', delivery: 'Free delivery in 4 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Gaurav Tiwari', rating: 5, title: 'Unbeatable value for money', body: 'Got 65 inches for under 50,000! The picture quality rivals my friends 55 inch Sony. Android TV means all apps work perfectly. Cricket on this huge screen is an amazing experience. Highly recommend for those on a budget.', date: '2024-01-28', sentiment: 'positive', verified: true },
@@ -307,10 +307,10 @@ export const products: Product[] = [
       'Vivid Picture Engine for enhanced clarity',
     ],
     prices: [
-      { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/search?q=Mi+TV+5X+55+inch+4K', delivery: 'Free delivery in 2 days' },
-      { store: 'Amazon', price: 45990, url: 'https://www.amazon.in/s?k=Mi+TV+5X+55+inch+4K+Android+TV', delivery: 'Free delivery in 3 days' },
-      { store: 'Croma', price: 47490, url: 'https://www.croma.com/searchB?q=Mi+TV+5X+55+inch', delivery: 'Free delivery in 4 days' },
-      { store: 'Reliance Digital', price: 46990, url: 'https://www.reliancedigital.in/search?q=Mi+TV+5X+55+inch', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/mi-5x-138-cm-55-inch-ultra-hd-4k-smart-android-led-tv/p/itm6fca1b8a27b7c', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 45990, url: 'https://www.amazon.in/dp/B09P6DKLXQ', delivery: 'Free delivery in 3 days' },
+     { store: 'Croma', price: 47490, url: 'https://www.croma.com/xiaomi-138cm-55-inch-4k-ultra-hd-smart-android-led-tv/p/228543', delivery: 'Free delivery in 4 days' },
+     { store: 'Reliance Digital', price: 46990, url: 'https://www.reliancedigital.in/xiaomi-mi-tv-5x-138cm-55-4k-ultra-hd-smart-android-led-tv/p/493036229', delivery: 'Free delivery in 3 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Amit Kapoor', rating: 4, title: 'Great budget TV', body: 'Mi 5X is the best budget TV available. PatchWall is innovative and content discovery is excellent. Dolby Vision at this price is incredible. Family loves it. The 32GB storage is very useful for downloading apps.', date: '2024-02-10', sentiment: 'positive', verified: true },
@@ -856,16 +856,16 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  { name: 'TVs', slug: 'tvs', emoji: '📺', count: 127, description: 'Smart LED, OLED & QLED TVs' },
-  { name: 'Refrigerators', slug: 'refrigerators', emoji: '❄️', count: 89, description: 'Single, Double Door & Side-by-Side' },
-  { name: 'Washing Machines', slug: 'washing-machines', emoji: '🫧', count: 64, description: 'Front Load, Top Load & Semi-Auto' },
-  { name: 'Dishwashers', slug: 'dishwashers', emoji: '🍽️', count: 32, description: 'Freestanding & Built-in Dishwashers' },
-  { name: 'Air Conditioners', slug: 'air-conditioners', emoji: '💨', count: 98, description: 'Split, Window & Portable ACs' },
-  { name: 'Microwaves', slug: 'microwaves', emoji: '🔥', count: 45, description: 'Solo, Grill & Convection Microwaves' },
-  { name: 'Water Purifiers', slug: 'water-purifiers', emoji: '💧', count: 53, description: 'RO, UV & Gravity-Based Purifiers' },
-  { name: 'Air Purifiers', slug: 'air-purifiers', emoji: '🌬️', count: 38, description: 'HEPA, UV & Activated Carbon Filters' },
-  { name: 'Vacuum Cleaners', slug: 'vacuum-cleaners', emoji: '🧹', count: 41, description: 'Wet-Dry, Robot & Handheld Vacuums' },
-  { name: 'Geysers', slug: 'geysers', emoji: '🚿', count: 57, description: 'Storage, Instant & Solar Geysers' },
+  { name: 'TVs', slug: 'tvs', emoji: '📺', count: products.filter(p => p.categorySlug === 'tvs').length, description: 'Smart LED, OLED & QLED TVs' },
+  { name: 'Refrigerators', slug: 'refrigerators', emoji: '❄️', count: products.filter(p => p.categorySlug === 'refrigerators').length, description: 'Single, Double Door & Side-by-Side' },
+  { name: 'Washing Machines', slug: 'washing-machines', emoji: '🫧', count: products.filter(p => p.categorySlug === 'washing-machines').length, description: 'Front Load, Top Load & Semi-Auto' },
+  { name: 'Dishwashers', slug: 'dishwashers', emoji: '🍽️', count: products.filter(p => p.categorySlug === 'dishwashers').length, description: 'Freestanding & Built-in Dishwashers' },
+  { name: 'Air Conditioners', slug: 'air-conditioners', emoji: '💨', count: products.filter(p => p.categorySlug === 'air-conditioners').length, description: 'Split, Window & Portable ACs' },
+  { name: 'Microwaves', slug: 'microwaves', emoji: '🔥', count: products.filter(p => p.categorySlug === 'microwaves').length, description: 'Solo, Grill & Convection Microwaves' },
+  { name: 'Water Purifiers', slug: 'water-purifiers', emoji: '💧', count: products.filter(p => p.categorySlug === 'water-purifiers').length, description: 'RO, UV & Gravity-Based Purifiers' },
+  { name: 'Air Purifiers', slug: 'air-purifiers', emoji: '🌬️', count: products.filter(p => p.categorySlug === 'air-purifiers').length, description: 'HEPA, UV & Activated Carbon Filters' },
+  { name: 'Vacuum Cleaners', slug: 'vacuum-cleaners', emoji: '🧹', count: products.filter(p => p.categorySlug === 'vacuum-cleaners').length, description: 'Wet-Dry, Robot & Handheld Vacuums' },
+  { name: 'Geysers', slug: 'geysers', emoji: '🚿', count: products.filter(p => p.categorySlug === 'geysers').length, description: 'Storage, Instant & Solar Geysers' },
 ];
 
 export function getProductsByCategory(slug: string): Product[] {
