@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getProductById, formatPrice, getDiscount, type Product } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const storeLogos: Record<string, string> = {
   Flipkart: '🛒',
