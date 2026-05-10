@@ -49,10 +49,10 @@ export const products: Product[] = [
     mrp: 79900,
     rating: 4.3,
     reviewCount: 2847,
-    image: 'https://www.sony.co.in/image/5d02da5df552836db894cead2d2f7109?fmt=pjpeg&wid=660&bgcolor=FFFFFF&bgc=FFFFFF',
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834f?w=600&q=80',?fmt=pjpeg&wid=660&bgcolor=FFFFFF&bgc=FFFFFF',
     images: [
-      'https://www.sony.co.in/image/5d02da5df552836db894cead2d2f7109?fmt=pjpeg&wid=660&bgcolor=FFFFFF&bgc=FFFFFF',
-      'https://www.sony.co.in/image/6745f4b7b92a5e8d3c1a9b0e2f4d6c8a?fmt=pjpeg&wid=660&bgcolor=FFFFFF&bgc=FFFFFF',
+      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834f?w=600&q=80',
+      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834f?w=600&q=80',
     ],
     badge: 'Best Seller',
     energyRating: '4 Star',
@@ -106,7 +106,7 @@ export const products: Product[] = [
     mrp: 72900,
     rating: 4.2,
     reviewCount: 3421,
-    image: 'https://images.samsung.com/in/televisions/uhd-tv/crystal-4k-uhd-cu8000/UA55CU8000KLXL/UA55CU8000KLXL_001_Front_Black.jpg',
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834f?w=600&q=80',/uhd-tv/crystal-4k-uhd-cu8000/UA55CU8000KLXL/UA55CU8000KLXL_001_Front_Black.jpg',
     images: [
       'https://images.samsung.com/in/televisions/uhd-tv/crystal-4k-uhd-cu8000/UA55CU8000KLXL/UA55CU8000KLXL_001_Front_Black.jpg',
       'https://images.samsung.com/in/televisions/uhd-tv/crystal-4k-uhd-cu8000/UA55CU8000KLXL/UA55CU8000KLXL_002_Back_Black.jpg',
@@ -163,7 +163,7 @@ export const products: Product[] = [
     mrp: 95000,
     rating: 4.4,
     reviewCount: 1893,
-    image: 'https://www.lg.com/in/images/tvs/md07535050/gallery/medium01.jpg',
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834f?w=600&q=80',/md07535050/gallery/medium01.jpg',
     images: [
       'https://www.lg.com/in/images/tvs/md07535050/gallery/medium01.jpg',
       'https://www.lg.com/in/images/tvs/md07535050/gallery/medium02.jpg',
@@ -220,7 +220,7 @@ export const products: Product[] = [
     mrp: 64999,
     rating: 4.1,
     reviewCount: 4532,
-    image: 'https://oasis.opstatics.com/content/dam/oasis/page/2022/in/product/tv/y1s-pro/spec-image/65-inch.png',
+    image: 'https://images.unsplash.com/photo-1571415060716-baff5f717c9d?w=600&q=80',/content/dam/oasis/page/2022/in/product/tv/y1s-pro/spec-image/65-inch.png',
     images: [
       'https://oasis.opstatics.com/content/dam/oasis/page/2022/in/product/tv/y1s-pro/spec-image/65-inch.png',
     ],
@@ -276,7 +276,7 @@ export const products: Product[] = [
     mrp: 56999,
     rating: 4.0,
     reviewCount: 6234,
-    image: 'https://i02.appmifile.com/mi-com-product/fly-birds/mi-tv-5x/M/9e4c45b68fac61e942d9476c1cabd8f9.png',
+    image: 'https://images.unsplash.com/photo-1571415060716-baff5f717c9d?w=600&q=80',/mi-com-product/fly-birds/mi-tv-5x/M/9e4c45b68fac61e942d9476c1cabd8f9.png',
     images: [
       'https://i02.appmifile.com/mi-com-product/fly-birds/mi-tv-5x/M/9e4c45b68fac61e942d9476c1cabd8f9.png',
     ],
@@ -331,7 +331,7 @@ export const products: Product[] = [
     mrp: 165000,
     rating: 4.5,
     reviewCount: 892,
-    image: 'https://images.samsung.com/in/refrigerators/french-door-refrigerators/653l-french-door-rf65a977fsrhl/RF65A977FSR_HL_001_Front_Silver.jpg',
+    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80',/french-door-refrigerators/653l-french-door-rf65a977fsrhl/RF65A977FSR_HL_001_Front_Silver.jpg',
     images: [
       'https://images.samsung.com/in/refrigerators/french-door-refrigerators/653l-french-door-rf65a977fsrhl/RF65A977FSR_HL_001_Front_Silver.jpg',
     ],
@@ -379,7 +379,7 @@ export const products: Product[] = [
     mrp: 149000,
     rating: 4.3,
     reviewCount: 654,
-    image: 'https://www.lg.com/in/images/refrigerators/md07519888/gallery/medium01.jpg',
+    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80',/md07519888/gallery/medium01.jpg',
     images: [
       'https://www.lg.com/in/images/refrigerators/md07519888/gallery/medium01.jpg',
     ],
@@ -426,7 +426,7 @@ export const products: Product[] = [
     mrp: 43000,
     rating: 4.1,
     reviewCount: 1243,
-    image: 'https://www.haier.com/in/content/dam/haier/in/productcatalog/refrigerators/double-door/HRB-3404PKG-E/HRB-3404PKG-E.png',
+    image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80',/in/content/dam/haier/in/productcatalog/refrigerators/double-door/HRB-3404PKG-E/HRB-3404PKG-E.png',
     images: [
       'https://www.haier.com/in/content/dam/haier/in/productcatalog/refrigerators/double-door/HRB-3404PKG-E/HRB-3404PKG-E.png',
     ],
@@ -474,7 +474,7 @@ export const products: Product[] = [
     mrp: 69000,
     rating: 4.6,
     reviewCount: 3892,
-    image: 'https://www.daikin.co.in/content/dam/daikin/in/products/split/FTKF50TV16U/FTKF50TV16U_indoor.png',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',/content/dam/daikin/in/products/split/FTKF50TV16U/FTKF50TV16U_indoor.png',
     images: [
       'https://www.daikin.co.in/content/dam/daikin/in/products/split/FTKF50TV16U/FTKF50TV16U_indoor.png',
     ],
@@ -523,7 +523,7 @@ export const products: Product[] = [
     mrp: 58000,
     rating: 4.2,
     reviewCount: 2341,
-    image: 'https://www.voltasindia.com/content/dam/voltas/in/products/air-conditioners/split/213V-Vectra-Prism/213V-Vectra-Prism-front.png',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80',/content/dam/voltas/in/products/air-conditioners/split/213V-Vectra-Prism/213V-Vectra-Prism-front.png',
     images: [
       'https://www.voltasindia.com/content/dam/voltas/in/products/air-conditioners/split/213V-Vectra-Prism/213V-Vectra-Prism-front.png',
     ],
@@ -572,7 +572,7 @@ export const products: Product[] = [
     mrp: 73000,
     rating: 4.5,
     reviewCount: 2156,
-    image: 'https://www.lg.com/in/images/washing-machines/md07534206/gallery/medium01.jpg',
+    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80',/md07534206/gallery/medium01.jpg',
     images: [
       'https://www.lg.com/in/images/washing-machines/md07534206/gallery/medium01.jpg',
     ],
@@ -622,7 +622,7 @@ export const products: Product[] = [
     mrp: 62000,
     rating: 4.3,
     reviewCount: 1876,
-    image: 'https://images.samsung.com/in/washing-machines/front-load-washing-machine/7-kg-ecobubble-ww70t4020cehl/WW70T4020CE_HL_001_Front_White.jpg',
+    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80',/front-load-washing-machine/7-kg-ecobubble-ww70t4020cehl/WW70T4020CE_HL_001_Front_White.jpg',
     images: [
       'https://images.samsung.com/in/washing-machines/front-load-washing-machine/7-kg-ecobubble-ww70t4020cehl/WW70T4020CE_HL_001_Front_White.jpg',
     ],
@@ -672,9 +672,9 @@ export const products: Product[] = [
     mrp: 20990,
     rating: 4.4,
     reviewCount: 15432,
-    image: 'https://www.kent.co.in/images/products/kent-grand-plus-water-purifier.jpg',
+    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80',/images/products/kent-grand-plus-water-purifier.jpg',
     images: [
-      'https://www.kent.co.in/images/products/kent-grand-plus-water-purifier.jpg',
+      'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80',
     ],
     badge: "India's #1",
     energyRating: '',
@@ -720,7 +720,7 @@ export const products: Product[] = [
     mrp: 24990,
     rating: 4.3,
     reviewCount: 8921,
-    image: 'https://www.aquaguard.com/images/products/aura/aquaguard-aura-ro-uv-mtds.jpg',
+    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80',/images/products/aura/aquaguard-aura-ro-uv-mtds.jpg',
     images: [
       'https://www.aquaguard.com/images/products/aura/aquaguard-aura-ro-uv-mtds.jpg',
     ],
@@ -767,7 +767,7 @@ export const products: Product[] = [
     mrp: 17990,
     rating: 4.1,
     reviewCount: 5634,
-    image: 'https://www.livpure.com/cdn/shop/products/Glo-Star-RO-UV-Mineraliser-7L.jpg',
+    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80',/cdn/shop/products/Glo-Star-RO-UV-Mineraliser-7L.jpg',
     images: [
       'https://www.livpure.com/cdn/shop/products/Glo-Star-RO-UV-Mineraliser-7L.jpg',
     ],
@@ -814,7 +814,7 @@ export const products: Product[] = [
     mrp: 56000,
     rating: 4.4,
     reviewCount: 1432,
-    image: 'https://www.ifbappliances.com/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/s/e/senator-wxs-front.jpg',
+    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80',/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/s/e/senator-wxs-front.jpg',
     images: [
       'https://www.ifbappliances.com/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/s/e/senator-wxs-front.jpg',
     ],
