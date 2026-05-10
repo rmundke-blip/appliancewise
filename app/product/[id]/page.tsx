@@ -1,7 +1,6 @@
 'use client';
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { ArrowLeft, Star, ShoppingCart, GitCompare, Zap, Shield, X, ChevronLeft, ChevronRight, ExternalLink, ThumbsUp, ThumbsDown, CircleCheck as CheckCircle, TrendingDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -61,7 +60,7 @@ export default function ProductPage() {
         <div className="flex items-center justify-center min-h-[80vh]">
           <div className="text-center">
             <p className="text-[#8B949E] text-lg">Product not found</p>
-            <Link href="/" className="text-[#00D4AA] mt-4 inline-block hover:underline">Go home</Link>
+            <a href="/" className="text-[#00D4AA] mt-4 inline-block hover:underline">Go home</a>
           </div>
         </div>
       </div>
