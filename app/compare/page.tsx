@@ -170,6 +170,8 @@ export default function ComparePage() {
                     </div>
                     <a
                       href={product.prices[0].url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-1.5 w-full py-2 rounded-lg bg-[#00D4AA] text-[#0D1117] text-xs font-bold hover:bg-[#00D4AA]/90 transition-colors"
                     >
                       <ShoppingCart size={11} />
