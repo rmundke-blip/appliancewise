@@ -86,16 +86,12 @@ export default function ProductPage() {
 
       <main className="pt-20 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
 
-        <div className="flex items-center gap-3 mb-8 mt-4">
-          <Link
-            href={'/category/' + product.categorySlug}
-            className="flex items-center gap-1.5 text-sm text-[#8B949E] hover:text-[#00D4AA] transition-colors"
-          >
-            <ArrowLeft size={16} />
-            Back to {product.category}
-          </Link>
-          <ChevronRight size={14} className="text-[#30363D]" />
-          <span className="text-sm text-[#8B949E] truncate">{product.brand} {product.name}</span>
+         <div className="mt-4">
+          <Breadcrumb crumbs={[
+            { label: 'Home', href: '/' },
+            { label: product.category, href: '/category/' + product.categorySlug },
+            { label: product.brand + ' ' + product.name },
+          ]} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
