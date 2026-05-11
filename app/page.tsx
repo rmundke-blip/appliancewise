@@ -7,7 +7,7 @@ import { Search, ArrowRight, Sparkles, ShieldCheck, Award, TrendingUp, ChevronRi
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
-import { categories, getTrendingTVs, formatPrice } from '@/lib/data';
+import { categories, getTrendingTVs, formatPrice, products, getProductPrimaryImage } from '@/lib/data';
 
 const trustBadges = [
   { icon: ShieldCheck, label: '100% Unbiased Reviews' },
@@ -20,6 +20,15 @@ export default function Home() {
   const router = useRouter();
   const [query, setQuery] = useState('');
   const trendingTVs = getTrendingTVs();
+  const normalizedQuery = query.trim().toLowerCase();
+  const searchResults = normalizedQuery
+    ? products.filter(product =>
+        product.name.toLowerCase().includes(normalizedQuery) ||
+        product.brand.toLowerCase().includes(normalizedQuery) ||
+        product.category.toLowerCase().includes(normalizedQuery) ||
+        product.categorySlug.toLowerCase().includes(normalizedQuery)
+      ).slice(0, 5)
+    : [];
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,6 +92,33 @@ export default function Home() {
               </button>
             </div>
           </form>
+
+          {query.trim() && (
+            <div className="mx-auto max-w-2xl rounded-3xl border border-[#30363D] bg-[#161B22] overflow-hidden shadow-lg shadow-black/20">
+              {searchResults.length > 0 ? (
+                searchResults.map(product => (
+                  <Link
+                    key={product.id}
+                    href={`/product/${product.id}`}
+                    className="flex items-center gap-3 px-4 py-4 hover:bg-white/5 transition-colors border-b border-[#30363D] last:border-b-0"
+                    onClick={() => setQuery('')}
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-[#0D1117] overflow-hidden flex-shrink-0">
+                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-[#E6EDF3] truncate">{product.brand} {product.name}</p>
+                      <p className="text-xs text-[#8B949E] truncate">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <div className="px-4 py-5 text-sm text-[#8B949E]">
+                  No results found for "{query}". Try a different brand, model, or category.
+                </div>
+              )}
+            </div>
+          )}
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
