@@ -100,6 +100,11 @@ export default function RecommendPage() {
   useEffect(() => {
     if (step === 4) {
       setThinkingProgress(0);
+      const categoryProducts = products.filter(p => p.categorySlug === data.category);
+      if (categoryProducts.length === 0) {
+        setStep(1);
+        return;
+      }
       const interval = setInterval(() => {
         setThinkingProgress(prev => {
           if (prev >= 100) {
@@ -114,7 +119,7 @@ export default function RecommendPage() {
       }, 40);
       return () => clearInterval(interval);
     }
-  }, [step]);
+  }, [step, data.category]);
 
   const selectedCategory = categories.find(c => c.slug === data.category);
 
