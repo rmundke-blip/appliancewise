@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { X, Plus, Star, Zap, CircleCheck as CheckCircle, Circle as XCircle, Sparkles, GitCompare, ShoppingCart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { getProductById, formatPrice, type Product } from '@/lib/data';
+import { getProductById, formatPrice, getProductPrimaryImage, type Product } from '@/lib/data';
 import { getCompareIds, removeFromCompare, clearCompare } from '@/lib/compare-store';
 
 const COMPARE_SPECS = [
@@ -156,7 +156,7 @@ export default function ComparePage() {
                       <X size={13} />
                     </button>
                     <div className="h-36 bg-gradient-to-br from-[#1F2937] to-[#111827] overflow-hidden">
-                      <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="p-3">

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Star, GitCompare, ExternalLink } from 'lucide-react';
-import { type Product, formatPrice, getDiscount } from '@/lib/data';
+import { type Product, formatPrice, getDiscount, getProductPrimaryImage } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
 
 type Props = {
@@ -16,6 +16,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
   const [inCompare, setInCompare] = useState(false);
   const [compareMsg, setCompareMsg] = useState('');
   const discount = getDiscount(product.price, product.mrp);
+  const imageSrc = getProductPrimaryImage(product);
 
   useEffect(() => {
     setInCompare(isInCompare(product.id));
@@ -60,7 +61,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
       <Link href={`/product/${product.id}`} className="block">
         <div className={`relative overflow-hidden bg-gradient-to-br from-[#1F2937] to-[#111827] flex items-center justify-center ${compact ? 'h-40' : 'h-52'}`}>
           <img
-            src={product.image}
+            src={imageSrc}
             alt={product.name}
             className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
             onError={(e) => {

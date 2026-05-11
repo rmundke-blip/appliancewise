@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { ArrowLeft, Star, ShoppingCart, GitCompare, Zap, Shield, X, ChevronLeft, ChevronRight, ExternalLink, ThumbsUp, ThumbsDown, CircleCheck as CheckCircle, TrendingDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { getProductById, formatPrice, getDiscount, type Product } from '@/lib/data';
+import { getProductById, formatPrice, getDiscount, getProductPrimaryImage, type Product } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -30,7 +30,11 @@ export default function ProductPage() {
   useEffect(() => {
     const p = getProductById(id);
     setProduct(p || null);
-    if (p) setInCompare(isInCompare(p.id));
+    if (p) {
+      const preferredIndex = p.images.findIndex(img => img && !img.includes('images.unsplash.com'));
+      setActiveImage(preferredIndex >= 0 ? preferredIndex : 0);
+      setInCompare(isInCompare(p.id));
+    }
   }, [id]);
 
   useEffect(() => {
@@ -98,7 +102,7 @@ export default function ProductPage() {
           <div>
             <div className="relative bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src={product.images[activeImage]}
+                src={product.images[activeImage] || getProductPrimaryImage(product)}
                 alt={product.name}
                 className="w-full h-full object-contain p-4"
                 onError={(e) => {

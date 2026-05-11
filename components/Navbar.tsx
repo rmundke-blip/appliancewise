@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Search, X, Menu, Zap, GitCompare } from 'lucide-react';
 import { getCompareIds } from '@/lib/compare-store';
-import { products } from '@/lib/data';
+import { products, getProductPrimaryImage } from '@/lib/data';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -150,7 +150,7 @@ export default function Navbar() {
                     className={`flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors ${i < searchResults.length - 1 ? 'border-b border-[#30363D]' : ''}`}
                   >
                     <div className="w-10 h-10 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0">
-                      <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
                     </div>
                     <div className="min-w-0">
                       <p className="text-sm font-medium text-[#E6EDF3] truncate">{product.brand} {product.name}</p>

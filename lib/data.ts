@@ -2314,6 +2314,14 @@ export function getProductById(id: string): Product | undefined {
   return products.find(p => p.id === id);
 }
 
+export function getProductPrimaryImage(product: Product): string {
+  const productImage = product.images.find(img => img && !img.includes('images.unsplash.com'));
+  if (productImage) return productImage;
+  const fallbackImage = product.images[0] || product.image;
+  if (fallbackImage && !fallbackImage.includes('images.unsplash.com')) return fallbackImage;
+  return `https://placehold.co/400x300/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+}
+
 export function getTrendingTVs(): Product[] {
   return products.filter(p => p.categorySlug === 'tvs').slice(0, 4);
 }
