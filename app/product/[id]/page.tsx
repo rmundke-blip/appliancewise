@@ -205,7 +205,7 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              
+              <a
                 href={product.prices[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
