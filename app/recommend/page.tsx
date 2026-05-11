@@ -1,11 +1,11 @@
-‘use client’;
+'use client';
 
-import { useState, useEffect } from ‘react’;
-import Link from ‘next/link’;
-import { Sparkles, ChevronLeft, ChevronRight, Star, ArrowRight, CircleCheck as CheckCircle, RotateCcw, ExternalLink } from ‘lucide-react’;
-import Navbar from ‘@/components/Navbar’;
-import Footer from ‘@/components/Footer’;
-import { products, categories, formatPrice, type Product } from ‘@/lib/data’;
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Sparkles, ChevronLeft, ChevronRight, Star, ArrowRight, CircleCheck as CheckCircle, RotateCcw, ExternalLink } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { products, categories, formatPrice, type Product } from '@/lib/data';
 
 type WizardData = {
   category: string;
@@ -15,47 +15,44 @@ type WizardData = {
   needs: string[];
 };
 
-const HOME_TYPES = [‘1BHK Apartment’, ‘2BHK Apartment’, ‘3BHK Apartment’, ‘Independent House’, ‘Villa’];
+const HOME_TYPES = ['1BHK Apartment', '2BHK Apartment', '3BHK Apartment', 'Independent House', 'Villa'];
 
 const SPECIAL_NEEDS: Record<string, string[]> = {
-  tvs: [‘Large Screen (55”+)’, ‘Gaming’, ‘4K HDR’, ‘Energy Saving’, ‘Built-in Soundbar’, ‘Smart Features’],
-  refrigerators: [‘Large Family’, ‘Energy Saving’, ‘Vegetarian Heavy Use’, ‘Power Cut Areas’, ‘Hard Water Area’, ‘Frequent Load Shedding’],
-  ‘air-conditioners’: [‘Very Hot Climate’, ‘Energy Saving’, ‘Large Room’, ‘Frequent Voltage Fluctuations’, ‘Monsoon Humidity’, ‘Silent Operation’],
-  ‘washing-machines’: [‘Hard Water Area’, ‘Delicate Fabrics’, ‘Large Family’, ‘Energy Saving’, ‘Quick Wash Needed’, ‘Water Scarce Area’],
-  ‘water-purifiers’: [‘Very High TDS Water’, ‘Hard Water’, ‘Municipal Supply’, ‘Borewell Water’, ‘Large Family’, ‘Budget Conscious’],
-  default: [‘Energy Saving’, ‘Budget Friendly’, ‘Best Brand’, ‘Low Maintenance’, ‘Large Family’, ‘Indian Conditions’],
+  tvs: ['Large Screen (55"+)', 'Gaming', '4K HDR', 'Energy Saving', 'Built-in Soundbar', 'Smart Features'],
+  refrigerators: ['Large Family', 'Energy Saving', 'Vegetarian Heavy Use', 'Power Cut Areas', 'Hard Water Area', 'Frequent Load Shedding'],
+  'air-conditioners': ['Very Hot Climate', 'Energy Saving', 'Large Room', 'Frequent Voltage Fluctuations', 'Monsoon Humidity', 'Silent Operation'],
+  'washing-machines': ['Hard Water Area', 'Delicate Fabrics', 'Large Family', 'Energy Saving', 'Quick Wash Needed', 'Water Scarce Area'],
+  'water-purifiers': ['Very High TDS Water', 'Hard Water', 'Municipal Supply', 'Borewell Water', 'Large Family', 'Budget Conscious'],
+  default: ['Energy Saving', 'Budget Friendly', 'Best Brand', 'Low Maintenance', 'Large Family', 'Indian Conditions'],
 };
 
 const BUDGET_RANGES: Record<string, [number, number, number]> = {
   tvs: [15000, 300000, 50000],
   refrigerators: [15000, 200000, 40000],
-  ‘air-conditioners’: [25000, 150000, 45000],
-  ‘washing-machines’: [15000, 100000, 40000],
-  ‘water-purifiers’: [5000, 40000, 15000],
+  'air-conditioners': [25000, 150000, 45000],
+  'washing-machines': [15000, 100000, 40000],
+  'water-purifiers': [5000, 40000, 15000],
   default: [5000, 200000, 30000],
 };
 
 function getMatchScore(product: Product, data: WizardData): number {
-  // FIX 3: Strict category guard. If it's not the requested category, it gets 0 score.
   if (product.categorySlug !== data.category) return 0;
 
   let score = 50;
   score += product.rating * 5;
   score += Math.min(product.sentiment.positive * 0.2, 15);
 
-  // Budget logic - Strictness increased
   if (product.price <= data.budget) score += 20;
   else if (product.price <= data.budget * 1.15) score += 10;
-  else score -= 30; // High penalty for exceeding budget
+  else score -= 30; 
 
-  if (data.needs.includes(‘Energy Saving’) && product.energyRating?.includes(‘5’)) score += 15;
-  if (data.needs.includes(‘Large Family’) && data.familySize >= 4) score += 10;
+  if (data.needs.includes('Energy Saving') && product.energyRating?.includes('5')) score += 15;
+  if (data.needs.includes('Large Family') && data.familySize >= 4) score += 10;
   
   return Math.min(Math.max(Math.round(score), 30), 98);
 }
 
 function getRecommendations(data: WizardData): Array<{ product: Product; score: number; reason: string }> {
-  // FIX 3 (Continued): Ensure we only look at the specific category requested
   const categoryProducts = products.filter(p => p.categorySlug === data.category);
   
   if (categoryProducts.length === 0) return [];
@@ -63,9 +60,9 @@ function getRecommendations(data: WizardData): Array<{ product: Product; score: 
   const scored = categoryProducts.map(product => {
     const score = getMatchScore(product, data);
     const reasons = [];
-    if (product.rating >= 4.4) reasons.push(‘top-rated performance’);
-    if (product.price <= data.budget) reasons.push(‘perfect budget match’);
-    if (product.energyRating?.includes(‘5’)) reasons.push(‘highly energy efficient’);
+    if (product.rating >= 4.4) reasons.push('top-rated performance');
+    if (product.price <= data.budget) reasons.push('perfect budget match');
+    if (product.energyRating?.includes('5')) reasons.push('highly energy efficient');
     if (product.badge) reasons.push(product.badge.toLowerCase());
 
     return {
@@ -75,9 +72,8 @@ function getRecommendations(data: WizardData): Array<{ product: Product; score: 
     };
   });
 
-  // FIX 1: Increased slice to 30 to show more products if available in data
   return scored
-    .filter(item => item.score > 40) // Filter out poor matches
+    .filter(item => item.score > 40)
     .sort((a, b) => b.score - a.score)
     .slice(0, 30);
 }
@@ -85,9 +81,9 @@ function getRecommendations(data: WizardData): Array<{ product: Product; score: 
 export default function RecommendPage() {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<WizardData>({
-    category: ‘’,
+    category: '',
     familySize: 4,
-    homeType: ‘2BHK Apartment’,
+    homeType: '2BHK Apartment',
     budget: 50000,
     needs: [],
   });
@@ -120,31 +116,31 @@ export default function RecommendPage() {
 
   const toggleNeed = (need: string) => {
     setData(prev => ({
-      …prev,
+      ...prev,
       needs: prev.needs.includes(need)
         ? prev.needs.filter(n => n !== need)
-        : […prev.needs, need],
+        : [...prev.needs, need],
     }));
   };
 
   const handleCategorySelect = (slug: string) => {
     const range = BUDGET_RANGES[slug] || BUDGET_RANGES.default;
-    setData(prev => ({ …prev, category: slug, budget: range[2], needs: [] }));
+    setData(prev => ({ ...prev, category: slug, budget: range[2], needs: [] }));
   };
 
   const reset = () => {
     setStep(1);
-    setData({ category: ‘’, familySize: 4, homeType: ‘2BHK Apartment’, budget: 50000, needs: [] });
+    setData({ category: '', familySize: 4, homeType: '2BHK Apartment', budget: 50000, needs: [] });
     setRecommendations([]);
   };
 
   const thinkingMessages = [
-    ‘Scanning verified Indian retailers…’,
-    ‘Validating product availability…’,
-    ‘Filtering by your specific category…’,
-    ‘Evaluating energy ratings…’,
-    ‘Analyzing recent price drops…’,
-    ‘Finalizing your personalized list…’,
+    'Scanning verified Indian retailers...',
+    'Validating product availability...',
+    'Filtering by your specific category...',
+    'Evaluating energy ratings...',
+    'Analyzing recent price drops...',
+    'Finalizing your personalized list...',
   ];
 
   const [thinkingMsg, setThinkingMsg] = useState(0);
@@ -341,7 +337,6 @@ export default function RecommendPage() {
                         <span className="text-xl font-bold text-[#E6EDF3]">{formatPrice(product.price)}</span>
                         <div className="flex gap-3">
                           <Link href={`/product/${product.id}`} className="text-[#8B949E] text-sm font-medium hover:text-[#E6EDF3]">View Specs</Link>
-                          {/* FIX 2: Fixed "Buy Now" logic with direct product page link */}
                           <a 
                             href={product.affiliateUrl || `https://www.amazon.in/s?k=${encodeURIComponent(product.name)}`} 
                             target="_blank" 
