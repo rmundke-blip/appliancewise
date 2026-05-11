@@ -97,20 +97,33 @@ export default function Home() {
             <div className="mx-auto max-w-2xl rounded-3xl border border-[#30363D] bg-[#161B22] overflow-hidden shadow-lg shadow-black/20">
               {searchResults.length > 0 ? (
                 searchResults.map(product => (
-                  <Link
+                  <div
                     key={product.id}
-                    href={`/product/${product.id}`}
-                    className="flex items-center gap-3 px-4 py-4 hover:bg-white/5 transition-colors border-b border-[#30363D] last:border-b-0"
-                    onClick={() => setQuery('')}
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors border-b border-[#30363D] last:border-b-0"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-[#0D1117] overflow-hidden flex-shrink-0">
-                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold text-[#E6EDF3] truncate">{product.brand} {product.name}</p>
-                      <p className="text-xs text-[#8B949E] truncate">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
-                    </div>
-                  </Link>
+                    <Link
+                      href={`/product/${product.id}`}
+                      className="flex items-center gap-3 flex-1 min-w-0"
+                      onClick={() => setQuery('')}
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0">
+                        <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-[#E6EDF3] truncate">{product.brand} {product.name}</p>
+                        <p className="text-xs text-[#8B949E] truncate">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
+                      </div>
+                    </Link>
+                    <a
+                      href={product.prices[0].url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#00D4AA]/15 text-[#00D4AA] text-xs font-semibold hover:bg-[#00D4AA]/25 transition-colors flex-shrink-0 whitespace-nowrap"
+                      onClick={() => setQuery('')}
+                    >
+                      Buy
+                    </a>
+                  </div>
                 ))
               ) : (
                 <div className="px-4 py-5 text-sm text-[#8B949E]">

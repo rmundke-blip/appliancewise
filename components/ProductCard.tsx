@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Star, GitCompare, ExternalLink } from 'lucide-react';
+import { Star, GitCompare, ExternalLink, ShoppingCart } from 'lucide-react';
 import { type Product, formatPrice, getDiscount, getProductPrimaryImage } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
 
@@ -120,12 +120,23 @@ export default function ProductCard({ product, showCompare = true, compact = fal
 
         {/* Actions */}
         <div className="flex gap-2 pt-1">
-          <Link
-            href={`/product/${product.id}`}
+          <a
+            href={product.prices[0].url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#00D4AA] text-[#0D1117] text-sm font-semibold hover:bg-[#00D4AA]/90 transition-colors"
           >
-            <ExternalLink size={13} />
-            View Details
+            <ShoppingCart size={13} />
+            Buy Now
+          </a>
+
+          <Link
+            href={`/product/${product.id}`}
+            className="flex items-center justify-center gap-1 px-3 py-2 rounded-xl text-[#8B949E] text-xs font-medium hover:text-[#00D4AA] border border-[#30363D] hover:border-[#00D4AA]/40 transition-colors"
+            title="View full product details"
+          >
+            <ExternalLink size={11} />
+            Details
           </Link>
 
           {showCompare && (

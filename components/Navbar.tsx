@@ -143,20 +143,33 @@ export default function Navbar() {
             {searchResults.length > 0 && (
               <div className="mt-2 bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
                 {searchResults.map((product, i) => (
-                  <Link
+                  <div
                     key={product.id}
-                    href={`/product/${product.id}`}
-                    onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
                     className={`flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors ${i < searchResults.length - 1 ? 'border-b border-[#30363D]' : ''}`}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0">
-                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium text-[#E6EDF3] truncate">{product.brand} {product.name}</p>
-                      <p className="text-xs text-[#8B949E]">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
-                    </div>
-                  </Link>
+                    <Link
+                      href={`/product/${product.id}`}
+                      onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
+                      className="flex items-center gap-3 flex-1 min-w-0"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0">
+                        <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-[#E6EDF3] truncate">{product.brand} {product.name}</p>
+                        <p className="text-xs text-[#8B949E]">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
+                      </div>
+                    </Link>
+                    <a
+                      href={product.prices[0].url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2.5 py-1 rounded-lg bg-[#00D4AA]/15 text-[#00D4AA] text-xs font-semibold hover:bg-[#00D4AA]/25 transition-colors flex-shrink-0 whitespace-nowrap"
+                      onClick={(e) => { e.stopPropagation(); setSearchOpen(false); setSearchQuery(''); }}
+                    >
+                      Buy
+                    </a>
+                  </div>
                 ))}
               </div>
             )}
