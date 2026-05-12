@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { ArrowLeft, Star, ShoppingCart, GitCompare, Zap, Shield, X, ChevronLeft, ChevronRight, ExternalLink, ThumbsUp, ThumbsDown, CircleCheck as CheckCircle, TrendingDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { getProductById, formatPrice, getDiscount, getProductPrimaryImage, type Product } from '@/lib/data';
+import { getProductById, formatPrice, getDiscount, getProductPrimaryImage, type Product, getBestBuyUrl } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -210,13 +210,13 @@ export default function ProductPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href={product.prices[0].url}
+                href={getBestBuyUrl(product)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#00D4AA] text-[#0D1117] font-bold hover:bg-[#00D4AA]/90 transition-colors"
               >
                 <ShoppingCart size={16} />
-                Buy on {product.prices[0].store}
+                Buy Now
               </a>
               <button
                 onClick={handleCompare}

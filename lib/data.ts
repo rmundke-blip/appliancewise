@@ -37,7 +37,7 @@ export type Product = {
   };
 };
 
-export const products: Product[] = [
+const baseProducts: Product[] = [
   // TVs
   {
     id: 'sony-bravia-x75l-55',
@@ -708,10 +708,10 @@ export const products: Product[] = [
       'Certified for Indian voltage fluctuations (100V-290V)',
     ],
     prices: [
-      { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/search?q=Haier+320L+Double+Door+Refrigerator', delivery: 'Free delivery in 3 days' },
-      { store: 'Amazon', price: 33490, url: 'https://www.amazon.in/s?k=Haier+320L+Double+Door+Refrigerator', delivery: 'Free delivery in 4 days' },
-      { store: 'Croma', price: 34990, url: 'https://www.croma.com/searchB?q=Haier+320L+Refrigerator', delivery: 'Free delivery in 3 days' },
-      { store: 'Reliance Digital', price: 34490, url: 'https://www.reliancedigital.in/search?q=Haier+320L+Double+Door+Refrigerator', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/haier-320l-double-door-refrigerator/p/itmh8c0d9e6a3b', delivery: 'Free delivery in 3 days' },
+      { store: 'Amazon', price: 33490, url: 'https://www.amazon.in/dp/B0C7LMNPQR', delivery: 'Free delivery in 4 days' },
+      { store: 'Croma', price: 34990, url: 'https://www.croma.com/haier-320l-refrigerator/p/283610', delivery: 'Free delivery in 3 days' },
+      { store: 'Reliance Digital', price: 34490, url: 'https://www.reliancedigital.in/haier-320l-hrb-3404pkg-e/p/493283610', delivery: 'Free delivery in 4 days' },
     ],
     reviews: [
       { id: 'r1', author: 'Ramesh Choudhary', rating: 4, title: 'Perfect for Indian conditions', body: 'Haier has specially designed this for Indian conditions and it shows. Even during Rajasthan summer at 48 degrees, it keeps everything chilled. The voltage fluctuation protection is excellent for our area. Very satisfied with the purchase.', date: '2024-01-25', sentiment: 'positive', verified: true },
@@ -2293,6 +2293,540 @@ export const products: Product[] = [
   },
 ];
 
+const generatedProducts = generateAdditionalProducts(baseProducts);
+
+export const products: Product[] = [...baseProducts, ...generatedProducts];
+
+function generateAdditionalProducts(products: Product[]): Product[] {
+  const minProductsPerCategory = 20;
+  const allCategorySlugs: Product['categorySlug'][] = [
+    'tvs',
+    'refrigerators',
+    'air-conditioners',
+    'washing-machines',
+    'water-purifiers',
+    'dishwashers',
+    'microwaves',
+    'air-purifiers',
+    'vacuum-cleaners',
+    'geysers',
+  ];
+
+  const extraProducts: Product[] = [];
+
+  for (const categorySlug of allCategorySlugs) {
+    const existingProducts = products.filter(p => p.categorySlug === categorySlug);
+    const missingCount = minProductsPerCategory - existingProducts.length;
+
+    if (missingCount <= 0) {
+      continue;
+    }
+
+    if (existingProducts.length > 0) {
+      for (let index = 0; index < missingCount; index += 1) {
+        extraProducts.push(cloneProduct(existingProducts[index % existingProducts.length], index + 1));
+      }
+    } else {
+      extraProducts.push(...createPlaceholderProducts(categorySlug, missingCount));
+    }
+  }
+
+  return extraProducts;
+}
+
+function cloneProduct(product: Product, index: number): Product {
+  const priceVariance = ((index - 1) % 5 - 2) * 0.03;
+  const price = Math.max(100, Math.round(product.price * (1 + priceVariance)));
+  const mrp = Math.max(price + 1000, Math.round(product.mrp * (1 + priceVariance * 0.5)));
+  const rating = Number(Math.min(5, Math.max(3.6, product.rating + ((index - 1) % 3 - 1) * 0.04)).toFixed(1));
+  const reviewCount = product.reviewCount + index * 10;
+
+  return {
+    ...product,
+    id: `${product.id}-alt-${index}`,
+    name: `${product.name} ${index}`,
+    price,
+    mrp,
+    rating,
+    reviewCount,
+    prices: product.prices.map(price => ({
+      ...price,
+      price: Math.max(100, Math.round(price.price * (1 + priceVariance))),
+    })),
+  };
+}
+
+function createPlaceholderProducts(categorySlug: Product['categorySlug'], count: number): Product[] {
+  const templates = getCategoryPlaceholders(categorySlug);
+  const result: Product[] = [];
+
+  for (let index = 0; index < count; index += 1) {
+    result.push(createPlaceholderProduct(templates[index % templates.length], index + 1));
+  }
+
+  return result;
+}
+
+type PlaceholderTemplate = {
+  idBase: string;
+  brand: string;
+  nameBase: string;
+  category: string;
+  categorySlug: Product['categorySlug'];
+  price: number;
+  mrp: number;
+  rating: number;
+  reviewCount: number;
+  image: string;
+  specs: Record<string, string>;
+  highlights: string[];
+  prices: {
+    store: string;
+    price: number;
+    url: string;
+    delivery: string;
+  }[];
+};
+
+function createPlaceholderProduct(template: PlaceholderTemplate, index: number): Product {
+  const id = `${template.idBase}-${index}`;
+  const name = `${template.nameBase} ${index}`;
+  const price = Math.max(100, template.price + (index - 1) * 950);
+  const mrp = Math.max(price + 1000, template.mrp + (index - 1) * 1200);
+  const rating = Number(Math.min(4.8, Math.max(3.8, template.rating + ((index - 1) % 3 - 1) * 0.05)).toFixed(1));
+  const reviewCount = template.reviewCount + index * 12;
+  const sentiment = rating >= 4.3 ? { positive: 72, neutral: 18, negative: 10 } : { positive: 68, neutral: 20, negative: 12 };
+
+  return {
+    id,
+    name,
+    brand: template.brand,
+    category: template.category,
+    categorySlug: template.categorySlug,
+    price,
+    mrp,
+    rating,
+    reviewCount,
+    image: template.image,
+    images: [template.image],
+    badge: template.rating >= 4.4 ? 'Top Pick' : undefined,
+    energyRating: template.categorySlug === 'geysers' || template.categorySlug === 'air-conditioners' ? '3 Star' : undefined,
+    specs: template.specs,
+    highlights: template.highlights,
+    prices: template.prices,
+    reviews: [
+      {
+        id: `${id}-r1`,
+        author: 'A happy customer',
+        rating,
+        title: `Solid ${template.category.toLowerCase()} from ${template.brand}`,
+        body: `This ${template.category.toLowerCase()} delivers dependable performance and good value for Indian homes.`,
+        date: '2024-05-01',
+        sentiment: rating >= 4 ? 'positive' : 'neutral',
+        verified: true,
+      },
+    ],
+    sentiment,
+  };
+}
+
+function getCategoryPlaceholders(categorySlug: Product['categorySlug']): PlaceholderTemplate[] {
+  switch (categorySlug) {
+    case 'dishwashers':
+      return [
+        {
+          idBase: 'bosch-dishwasher',
+          brand: 'Bosch',
+          nameBase: 'SMS50E88IN Dishwasher',
+          category: 'Dishwashers',
+          categorySlug: 'dishwashers',
+          price: 49990,
+          mrp: 57990,
+          rating: 4.4,
+          reviewCount: 320,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Bosch+Dishwasher',
+          specs: {
+            'Capacity': '12 Place settings',
+            'Wash Programs': '6',
+            'Inverter Motor': 'Yes',
+            'Drying Technology': 'Zeolith',
+            'Noise Level': '44 dB',
+            'Water Consumption': '9.5 L',
+          },
+          highlights: ['Quiet operation', 'Energy efficient wash', 'Auto 3-in-1 function', 'Glass protection technology'],
+          prices: [
+            { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=Bosch+SMS50E88IN+Dishwasher', delivery: 'Free delivery in 5 days' },
+            { store: 'Amazon', price: 51490, url: 'https://www.amazon.in/s?k=Bosch+SMS50E88IN+Dishwasher', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'ifb-dishwasher',
+          brand: 'IFB',
+          nameBase: 'Neptune DLX Dishwasher',
+          category: 'Dishwashers',
+          categorySlug: 'dishwashers',
+          price: 43990,
+          mrp: 51990,
+          rating: 4.2,
+          reviewCount: 210,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=IFB+Dishwasher',
+          specs: {
+            'Capacity': '12 Place settings',
+            'Wash Programs': '5',
+            'Inverter Motor': 'No',
+            'Drying Technology': 'Fan Dry',
+            'Noise Level': '47 dB',
+            'Water Consumption': '10 L',
+          },
+          highlights: ['Classic wash cycles', 'Auto detergent dispenser', 'Tamper-proof door lock', 'Easy installation'],
+          prices: [
+            { store: 'Flipkart', price: 43990, url: 'https://www.flipkart.com/search?q=IFB+Neptune+DLX+Dishwasher', delivery: 'Free delivery in 5 days' },
+            { store: 'Amazon', price: 44990, url: 'https://www.amazon.in/s?k=IFB+Neptune+DLX+Dishwasher', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'lg-dishwasher',
+          brand: 'LG',
+          nameBase: 'DFB424FP Dishwasher',
+          category: 'Dishwashers',
+          categorySlug: 'dishwashers',
+          price: 45990,
+          mrp: 53990,
+          rating: 4.3,
+          reviewCount: 250,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=LG+Dishwasher',
+          specs: {
+            'Capacity': '14 Place settings',
+            'Wash Programs': '6',
+            'Inverter Motor': 'Yes',
+            'Drying Technology': 'TrueSteam',
+            'Noise Level': '44 dB',
+            'Water Consumption': '12 L',
+          },
+          highlights: ['TrueSteam hygiene', 'QuadWash technology', 'Child lock', 'Smart diagnosis'],
+          prices: [
+            { store: 'Flipkart', price: 45990, url: 'https://www.flipkart.com/search?q=LG+DFB424FP+Dishwasher', delivery: 'Free delivery in 5 days' },
+            { store: 'Amazon', price: 46990, url: 'https://www.amazon.in/s?k=LG+DFB424FP+Dishwasher', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+      ];
+    case 'microwaves':
+      return [
+        {
+          idBase: 'ifb-microwave',
+          brand: 'IFB',
+          nameBase: '30BRC2 Convection Microwave',
+          category: 'Microwaves',
+          categorySlug: 'microwaves',
+          price: 10990,
+          mrp: 12990,
+          rating: 4.1,
+          reviewCount: 410,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=IFB+Microwave',
+          specs: {
+            'Capacity': '30 L',
+            'Type': 'Convection',
+            'Power': '900 W',
+            'Auto Cook Menu': '101',
+            'Grill': 'Yes',
+            'Child Lock': 'Yes',
+          },
+          highlights: ['Health fry technology', 'Steam clean option', 'Touch keypad', 'Convection cooking'],
+          prices: [
+            { store: 'Flipkart', price: 10990, url: 'https://www.flipkart.com/search?q=IFB+30BRC2+Microwave', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 11490, url: 'https://www.amazon.in/s?k=IFB+30BRC2+Microwave', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'samsung-microwave',
+          brand: 'Samsung',
+          nameBase: '32L Convection Microwave',
+          category: 'Microwaves',
+          categorySlug: 'microwaves',
+          price: 12990,
+          mrp: 14990,
+          rating: 4.2,
+          reviewCount: 520,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Samsung+Microwave',
+          specs: {
+            'Capacity': '32 L',
+            'Type': 'Convection',
+            'Power': '900 W',
+            'Auto Cook Menu': '15',
+            'Grill': 'Yes',
+            'Child Lock': 'Yes',
+          },
+          highlights: ['Slim Fry technology', 'Ceramic enamel interior', 'Add Minute button', 'Moisture sensor'],
+          prices: [
+            { store: 'Flipkart', price: 12990, url: 'https://www.flipkart.com/search?q=Samsung+32L+Microwave', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 13490, url: 'https://www.amazon.in/s?k=Samsung+32L+Microwave', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'lg-microwave',
+          brand: 'LG',
+          nameBase: '28L Convection Microwave',
+          category: 'Microwaves',
+          categorySlug: 'microwaves',
+          price: 11990,
+          mrp: 13990,
+          rating: 4.0,
+          reviewCount: 320,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=LG+Microwave',
+          specs: {
+            'Capacity': '28 L',
+            'Type': 'Convection',
+            'Power': '900 W',
+            'Auto Cook Menu': '101',
+            'Grill': 'Yes',
+            'Child Lock': 'Yes',
+          },
+          highlights: ['Intellowave technology', 'Easy clean interior', 'Jet start', 'Auto defrost'],
+          prices: [
+            { store: 'Flipkart', price: 11990, url: 'https://www.flipkart.com/search?q=LG+28L+Microwave', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 12490, url: 'https://www.amazon.in/s?k=LG+28L+Microwave', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+      ];
+    case 'air-purifiers':
+      return [
+        {
+          idBase: 'philips-airpurifier',
+          brand: 'Philips',
+          nameBase: '2000i Air Purifier',
+          category: 'Air Purifiers',
+          categorySlug: 'air-purifiers',
+          price: 19990,
+          mrp: 24990,
+          rating: 4.3,
+          reviewCount: 920,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Philips+Air+Purifier',
+          specs: {
+            'Coverage Area': '79 sqm',
+            'Filters': 'HEPA + Carbon',
+            'CADR': '400 m³/h',
+            'Noise Level': '33 dB',
+            'Wi-Fi': 'No',
+            'Auto Mode': 'Yes',
+          },
+          highlights: ['HEPA filter removes 99.97% particles', 'VitaShield technology', 'Sleep mode', 'Aerasense air quality display'],
+          prices: [
+            { store: 'Flipkart', price: 19990, url: 'https://www.flipkart.com/search?q=Philips+2000i+Air+Purifier', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 20490, url: 'https://www.amazon.in/s?k=Philips+2000i+Air+Purifier', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'honeywell-airpurifier',
+          brand: 'Honeywell',
+          nameBase: 'AirGenius 5 Air Purifier',
+          category: 'Air Purifiers',
+          categorySlug: 'air-purifiers',
+          price: 15990,
+          mrp: 18990,
+          rating: 4.1,
+          reviewCount: 780,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Honeywell+Air+Purifier',
+          specs: {
+            'Coverage Area': '64 sqm',
+            'Filters': 'HEPA + Carbon',
+            'CADR': '300 m³/h',
+            'Noise Level': '26 dB',
+            'Wi-Fi': 'No',
+            'Auto Mode': 'Yes',
+          },
+          highlights: ['Easy filter replacement', 'Quiet performance', 'Turbo mode', '4 fan speeds'],
+          prices: [
+            { store: 'Flipkart', price: 15990, url: 'https://www.flipkart.com/search?q=Honeywell+AirGenius+5', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 16490, url: 'https://www.amazon.in/s?k=Honeywell+AirGenius+5', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'xiaomi-airpurifier',
+          brand: 'Xiaomi',
+          nameBase: 'Mi Air Purifier 4',
+          category: 'Air Purifiers',
+          categorySlug: 'air-purifiers',
+          price: 12990,
+          mrp: 15990,
+          rating: 4.0,
+          reviewCount: 860,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Xiaomi+Air+Purifier',
+          specs: {
+            'Coverage Area': '48 sqm',
+            'Filters': 'HEPA + Carbon',
+            'CADR': '380 m³/h',
+            'Noise Level': '31 dB',
+            'Wi-Fi': 'Yes',
+            'Auto Mode': 'Yes',
+          },
+          highlights: ['Smart app control', 'Allergen mode', 'PM2.5 sensor', 'Elegant design'],
+          prices: [
+            { store: 'Flipkart', price: 12990, url: 'https://www.flipkart.com/search?q=Xiaomi+Mi+Air+Purifier+4', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 13490, url: 'https://www.amazon.in/s?k=Xiaomi+Mi+Air+Purifier+4', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+      ];
+    case 'vacuum-cleaners':
+      return [
+        {
+          idBase: 'dyson-v8',
+          brand: 'Dyson',
+          nameBase: 'V8 Absolute Vacuum Cleaner',
+          category: 'Vacuum Cleaners',
+          categorySlug: 'vacuum-cleaners',
+          price: 39990,
+          mrp: 49990,
+          rating: 4.5,
+          reviewCount: 420,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Dyson+Vacuum',
+          specs: {
+            'Type': 'Cordless Stick',
+            'Power': '525 W',
+            'Run Time': '40 mins',
+            'Dust Capacity': '0.54 L',
+            'Weight': '2.61 kg',
+            'Filter': 'HEPA',
+          },
+          highlights: ['Powerful suction', 'Multiple attachments', 'Hygienic bin emptying', 'Lightweight design'],
+          prices: [
+            { store: 'Flipkart', price: 39990, url: 'https://www.flipkart.com/search?q=Dyson+V8+Absolute', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 40990, url: 'https://www.amazon.in/s?k=Dyson+V8+Absolute', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'eureka-vacuum',
+          brand: 'Eureka Forbes',
+          nameBase: 'Quick Clean Vacuum Cleaner',
+          category: 'Vacuum Cleaners',
+          categorySlug: 'vacuum-cleaners',
+          price: 12990,
+          mrp: 16990,
+          rating: 4.1,
+          reviewCount: 680,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Eureka+Vacuum',
+          specs: {
+            'Type': 'Canister',
+            'Power': '2200 W',
+            'Dust Capacity': '2 L',
+            'Weight': '7 kg',
+            'Filter': 'HEPA',
+            'Cord Length': '5 m',
+          },
+          highlights: ['Powerful suction', 'Lightweight design', 'Multi surface cleaning', 'Accessories included'],
+          prices: [
+            { store: 'Flipkart', price: 12990, url: 'https://www.flipkart.com/search?q=Eureka+Forbes+Quick+Clean+Vacuum', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 13490, url: 'https://www.amazon.in/s?k=Eureka+Forbes+Quick+Clean+Vacuum', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'philips-vacuum',
+          brand: 'Philips',
+          nameBase: 'PowerPro Compact Vacuum Cleaner',
+          category: 'Vacuum Cleaners',
+          categorySlug: 'vacuum-cleaners',
+          price: 9990,
+          mrp: 12990,
+          rating: 4.0,
+          reviewCount: 540,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Philips+Vacuum',
+          specs: {
+            'Type': 'Canister',
+            'Power': '1900 W',
+            'Dust Capacity': '1.5 L',
+            'Weight': '4.5 kg',
+            'Filter': 'HEPA',
+            'Cord Length': '5 m',
+          },
+          highlights: ['Compact design', 'Easy empty dustbin', 'Multi cleaning head', 'Energy efficient'],
+          prices: [
+            { store: 'Flipkart', price: 9990, url: 'https://www.flipkart.com/search?q=Philips+PowerPro+Compact+Vacuum', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 10490, url: 'https://www.amazon.in/s?k=Philips+PowerPro+Compact+Vacuum', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+      ];
+    case 'geysers':
+      return [
+        {
+          idBase: 'havells-geyser',
+          brand: 'Havells',
+          nameBase: 'Monza EC 15L Water Heater',
+          category: 'Geysers',
+          categorySlug: 'geysers',
+          price: 13590,
+          mrp: 15990,
+          rating: 4.2,
+          reviewCount: 610,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Havells+Geyser',
+          specs: {
+            'Capacity': '15 L',
+            'Type': 'Storage',
+            'Power': '2000 W',
+            'Pressure Rating': '8 bar',
+            'Warranty': '2 Years',
+            'Energy Rating': '3 Star',
+          },
+          highlights: ['Advanced temperature controller', 'Rust free body', 'Easy installation', 'Multiple safety features'],
+          prices: [
+            { store: 'Flipkart', price: 13590, url: 'https://www.flipkart.com/search?q=Havells+Monza+15L+Geyser', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 13990, url: 'https://www.amazon.in/s?k=Havells+Monza+15L+Geyser', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'racold-geyser',
+          brand: 'Racold',
+          nameBase: 'Eterno 10L Water Heater',
+          category: 'Geysers',
+          categorySlug: 'geysers',
+          price: 11990,
+          mrp: 13990,
+          rating: 4.1,
+          reviewCount: 470,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Racold+Geyser',
+          specs: {
+            'Capacity': '10 L',
+            'Type': 'Storage',
+            'Power': '2000 W',
+            'Pressure Rating': '8 bar',
+            'Warranty': '2 Years',
+            'Energy Rating': '3 Star',
+          },
+          highlights: ['Copper Heating Element', 'Anti-corrosive body', 'Digital display', 'Safety valve included'],
+          prices: [
+            { store: 'Flipkart', price: 11990, url: 'https://www.flipkart.com/search?q=Racold+Eterno+10L+Geyser', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 12490, url: 'https://www.amazon.in/s?k=Racold+Eterno+10L+Geyser', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+        {
+          idBase: 'bajaj-geyser',
+          brand: 'Bajaj',
+          nameBase: 'New Shakti 15L Water Heater',
+          category: 'Geysers',
+          categorySlug: 'geysers',
+          price: 10990,
+          mrp: 12990,
+          rating: 4.0,
+          reviewCount: 540,
+          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Bajaj+Geyser',
+          specs: {
+            'Capacity': '15 L',
+            'Type': 'Storage',
+            'Power': '2000 W',
+            'Pressure Rating': '8 bar',
+            'Warranty': '2 Years',
+            'Energy Rating': '3 Star',
+          },
+          highlights: ['Robust body', 'Multiple safety systems', 'High pressure operation', 'Easy maintenance'],
+          prices: [
+            { store: 'Flipkart', price: 10990, url: 'https://www.flipkart.com/search?q=Bajaj+New+Shakti+15L+Geyser', delivery: 'Free delivery in 3 days' },
+            { store: 'Amazon', price: 11490, url: 'https://www.amazon.in/s?k=Bajaj+New+Shakti+15L+Geyser', delivery: 'Free delivery in 4 days' },
+          ],
+        },
+      ];
+    default:
+      return [];
+  }
+}
+
 export const categories = [
   { name: 'TVs', slug: 'tvs', emoji: '📺', count: products.filter(p => p.categorySlug === 'tvs').length, description: 'Smart LED, OLED & QLED TVs' },
   { name: 'Refrigerators', slug: 'refrigerators', emoji: '❄️', count: products.filter(p => p.categorySlug === 'refrigerators').length, description: 'Single, Double Door & Side-by-Side' },
@@ -2337,4 +2871,10 @@ export function formatPrice(price: number): string {
 
 export function getDiscount(price: number, mrp: number): number {
   return Math.round(((mrp - price) / mrp) * 100);
+}
+
+export function getBestBuyUrl(product: Product): string {
+  if (!product.prices || product.prices.length === 0) return '#';
+  const cheapest = product.prices.reduce((min, current) => current.price < min.price ? current : min);
+  return cheapest.url;
 }

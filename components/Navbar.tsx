@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Search, X, Menu, Zap, GitCompare } from 'lucide-react';
 import { getCompareIds } from '@/lib/compare-store';
-import { products, getProductPrimaryImage } from '@/lib/data';
+import { products, getProductPrimaryImage, getBestBuyUrl } from '@/lib/data';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -161,7 +161,7 @@ export default function Navbar() {
                       </div>
                     </Link>
                     <a
-                      href={product.prices[0].url}
+                      href={getBestBuyUrl(product)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-2.5 py-1 rounded-lg bg-[#00D4AA]/15 text-[#00D4AA] text-xs font-semibold hover:bg-[#00D4AA]/25 transition-colors flex-shrink-0 whitespace-nowrap"

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { X, Plus, Star, Zap, CircleCheck as CheckCircle, Circle as XCircle, Sparkles, GitCompare, ShoppingCart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { getProductById, formatPrice, getProductPrimaryImage, type Product } from '@/lib/data';
+import { getProductById, formatPrice, getProductPrimaryImage, type Product, getBestBuyUrl } from '@/lib/data';
 import { getCompareIds, removeFromCompare, clearCompare } from '@/lib/compare-store';
 
 const COMPARE_SPECS = [
@@ -169,7 +169,7 @@ export default function ComparePage() {
                       <span className="text-xs text-[#8B949E] ml-1">{product.rating}</span>
                     </div>
                     <a
-                      href={product.prices[0].url}
+                      href={getBestBuyUrl(product)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-1.5 w-full py-2 rounded-lg bg-[#00D4AA] text-[#0D1117] text-xs font-bold hover:bg-[#00D4AA]/90 transition-colors"

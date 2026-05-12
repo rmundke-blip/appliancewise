@@ -114,15 +114,15 @@ export default function Home() {
                         <p className="text-xs text-[#8B949E] truncate">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
                       </div>
                     </Link>
-                    <a
-                      href={product.prices[0].url}
+                    <Link
+                      href={`/product/${product.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#00D4AA]/15 text-[#00D4AA] text-xs font-semibold hover:bg-[#00D4AA]/25 transition-colors flex-shrink-0 whitespace-nowrap"
                       onClick={() => setQuery('')}
                     >
                       Buy
-                    </a>
+                    </Link>
                   </div>
                 ))
               ) : (

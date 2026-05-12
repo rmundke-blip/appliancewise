@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Sparkles, ArrowRight, ShoppingCart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { products, getProductPrimaryImage, formatPrice } from '@/lib/data';
+import { products, getProductPrimaryImage, formatPrice, getBestBuyUrl } from '@/lib/data';
 
 const categories = [
   { name: 'TVs', value: 'tvs' },
@@ -181,7 +181,7 @@ export default function RecommendPage() {
 
                       <div className="flex gap-2 pt-2">
                         <a
-                          href={product.prices[0].url}
+                          href={getBestBuyUrl(product)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#00D4AA] text-[#0D1117] text-sm font-semibold hover:bg-[#00D4AA]/90 transition-colors"
