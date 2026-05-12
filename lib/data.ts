@@ -81,8 +81,8 @@ const baseProducts: Product[] = [
       'Ambient Optimization for perfect picture in any room light',
     ],
     prices: [
-     { store: 'Flipkart', price: 62990, url: 'https://www.flipkart.com/sony-bravia-139-cm-55-inch-4k-ultra-hd-smart-led-google-tv-with-alexa-built-in/p/itmcb7a3dc0f4ced', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 63990, url: 'https://www.amazon.in/dp/B0C4MFW6GR', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 62990, url: 'https://www.flipkart.com/search?q=Bravia+X75L+55%22+4K+Ultra+HD+Smart+LED+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 63990, url: 'https://www.amazon.in/s?k=Bravia+X75L+55%22+4K+Ultra+HD+Smart+LED+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 64990, url: 'https://www.croma.com/sony-139cm-55-inch-4k-ultra-hd-smart-led-google-tv/p/265746', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 65490, url: 'https://www.reliancedigital.in/sony-139cm-55-4k-ultra-hd-smart-led-google-tv-kd-55x75l/p/493163640', delivery: 'Free delivery in 4 days' },
     ],
@@ -138,8 +138,8 @@ const baseProducts: Product[] = [
       'Q-Symphony compatible',
     ],
     prices: [
-    { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/samsung-138-cm-55-inch-4k-ultra-hd-smart-led-tv-2023-edition/p/itm012b2c5f4f75e', delivery: 'Free delivery in 2 days' },
-    { store: 'Amazon', price: 55490, url: 'https://www.amazon.in/dp/B0BVMZN8L3', delivery: 'Free delivery in 2 days' },
+    { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/search?q=Crystal+4K+Pro+55%22+Smart+LED+TV+%28UA55CUE80BKLXL%29', delivery: 'Free delivery in 2 days' },
+    { store: 'Amazon', price: 55490, url: 'https://www.amazon.in/s?k=Crystal+4K+Pro+55%22+Smart+LED+TV+%28UA55CUE80BKLXL%29', delivery: 'Free delivery in 2 days' },
     { store: 'Croma', price: 56990, url: 'https://www.croma.com/samsung-138cm-55-inch-crystal-4k-uhd-smart-led-tv/p/259786', delivery: 'Free delivery in 3 days' },
     { store: 'Reliance Digital', price: 57490, url: 'https://www.reliancedigital.in/samsung-138cm-55-4k-ultra-hd-smart-led-tv-ua55cue80bklxl/p/493128933', delivery: 'Free delivery in 4 days' },
     ],
@@ -195,8 +195,8 @@ const baseProducts: Product[] = [
       'Game Optimizer with VRR, ALLM, G-Sync Compatible',
     ],
     prices: [
-     { store: 'Flipkart', price: 71990, url: 'https://www.flipkart.com/lg-139-cm-55-inch-qned-4k-ultra-hd-smart-led-google-tv/p/itm9de1a3ecb6af9', delivery: 'Free delivery in 3 days' },
-     { store: 'Amazon', price: 72490, url: 'https://www.amazon.in/dp/B0C8QN9FBM', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 71990, url: 'https://www.flipkart.com/search?q=QNED80+55%22+4K+Smart+NanoCell+TV+%2855QNED80TSA%29', delivery: 'Free delivery in 3 days' },
+     { store: 'Amazon', price: 72490, url: 'https://www.amazon.in/s?k=QNED80+55%22+4K+Smart+NanoCell+TV+%2855QNED80TSA%29', delivery: 'Free delivery in 2 days' },
      { store: 'Croma', price: 73990, url: 'https://www.croma.com/lg-139cm-55-inch-qned-4k-ultra-hd-smart-led-google-tv/p/264821', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 74490, url: 'https://www.reliancedigital.in/lg-139cm-55-qned-4k-ultra-hd-smart-led-google-tv-55qned80tsa/p/493137062', delivery: 'Free delivery in 4 days' },
     ],
@@ -251,8 +251,8 @@ const baseProducts: Product[] = [
       'Works with OnePlus ecosystem devices',
     ],
     prices: [
-     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/oneplus-tv-y1s-pro-164-cm-65-inch-ultra-hd-4k-smart-android-led-tv/p/itm697e80a5d9f82', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 51490, url: 'https://www.amazon.in/dp/B09QV7TV7Y', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=TV+Y1S+Pro+65%22+4K+Ultra+HD+Smart+LED+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 51490, url: 'https://www.amazon.in/s?k=TV+Y1S+Pro+65%22+4K+Ultra+HD+Smart+LED+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 52990, url: 'https://www.croma.com/oneplus-164cm-65-inch-4k-ultra-hd-smart-android-led-tv/p/234792', delivery: 'Free delivery in 4 days' },
      { store: 'Reliance Digital', price: 53490, url: 'https://www.reliancedigital.in/oneplus-164cm-65-4k-ultra-hd-smart-android-led-tv-65y1s-pro/p/493082177', delivery: 'Free delivery in 4 days' },
     ],
@@ -307,8 +307,8 @@ const baseProducts: Product[] = [
       'Vivid Picture Engine for enhanced clarity',
     ],
     prices: [
-     { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/mi-5x-138-cm-55-inch-ultra-hd-4k-smart-android-led-tv/p/itm6fca1b8a27b7c', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 45990, url: 'https://www.amazon.in/dp/B09P6DKLXQ', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/search?q=TV+5X+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 45990, url: 'https://www.amazon.in/s?k=TV+5X+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 47490, url: 'https://www.croma.com/xiaomi-138cm-55-inch-4k-ultra-hd-smart-android-led-tv/p/228543', delivery: 'Free delivery in 4 days' },
      { store: 'Reliance Digital', price: 46990, url: 'https://www.reliancedigital.in/xiaomi-mi-tv-5x-138cm-55-4k-ultra-hd-smart-android-led-tv/p/493036229', delivery: 'Free delivery in 3 days' },
     ],
@@ -412,7 +412,7 @@ const baseProducts: Product[] = [
       'Premium design with slim bezels',
     ],
     prices: [
-     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/vu-premium-139-cm-55-inch-ultra-hd-4k-smart-android-tv/p/itm987654321', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/search?q=Premium+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 35990, url: 'https://www.amazon.in/s?k=Premium+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 36990, url: 'https://www.croma.com/vu-139cm-55-inch-ultra-hd-smart-android-tv/p/987654', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 36490, url: 'https://www.reliancedigital.in/vu-premium-139cm-55-ultra-hd-smart-android-tv/p/987654321', delivery: 'Free delivery in 4 days' },
@@ -463,7 +463,7 @@ const baseProducts: Product[] = [
       'Slim design',
     ],
     prices: [
-     { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/realme-139-cm-55-inch-ultra-hd-4k-smart-android-tv/p/itm456789123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/search?q=Smart+TV+55%22+4K+Ultra+HD+Android+TV', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 33990, url: 'https://www.amazon.in/s?k=Smart+TV+55%22+4K+Ultra+HD+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 34990, url: 'https://www.croma.com/realme-139cm-55-inch-ultra-hd-smart-android-tv/p/456789', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 34490, url: 'https://www.reliancedigital.in/realme-139cm-55-ultra-hd-smart-android-tv/p/456789123', delivery: 'Free delivery in 4 days' },
@@ -514,7 +514,7 @@ const baseProducts: Product[] = [
       'Multiple connectivity options',
     ],
     prices: [
-     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/kodak-139-cm-55-inch-ultra-hd-4k-smart-android-tv/p/itm789123456', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/search?q=55CA0001+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 30990, url: 'https://www.amazon.in/s?k=55CA0001+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 31990, url: 'https://www.croma.com/kodak-139cm-55-inch-ultra-hd-smart-android-tv/p/789123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 31490, url: 'https://www.reliancedigital.in/kodak-139cm-55-ultra-hd-smart-android-tv/p/789123456', delivery: 'Free delivery in 4 days' },
@@ -565,7 +565,7 @@ const baseProducts: Product[] = [
       'Warp Charge remote',
     ],
     prices: [
-     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/oneplus-u1s-139-cm-55-inch-ultra-hd-4k-smart-android-tv/p/itm321654987', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=U1S+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 50990, url: 'https://www.amazon.in/s?k=U1S+55%22+4K+Ultra+HD+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 51990, url: 'https://www.croma.com/oneplus-139cm-55-inch-ultra-hd-smart-android-tv/p/321654', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 51490, url: 'https://www.reliancedigital.in/oneplus-u1s-139cm-55-ultra-hd-smart-android-tv/p/321654987', delivery: 'Free delivery in 4 days' },
@@ -613,8 +613,8 @@ const baseProducts: Product[] = [
       'Twin Cooling Plus keeps humidity optimal',
     ],
     prices: [
-      { store: 'Flipkart', price: 129990, url: 'https://www.flipkart.com/search?q=Samsung+653L+French+Door+Refrigerator', delivery: 'Free delivery in 5 days' },
-      { store: 'Amazon', price: 131990, url: 'https://www.amazon.in/s?k=Samsung+653L+French+Door+Refrigerator', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 129990, url: 'https://www.flipkart.com/search?q=653L+French+Door+Refrigerator+with+SpaceMax', delivery: 'Free delivery in 5 days' },
+      { store: 'Amazon', price: 131990, url: 'https://www.amazon.in/s?k=653L+French+Door+Refrigerator+with+SpaceMax', delivery: 'Free delivery in 4 days' },
       { store: 'Croma', price: 132990, url: 'https://www.croma.com/searchB?q=Samsung+French+Door+653L', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 134990, url: 'https://www.reliancedigital.in/search?q=Samsung+French+Door+653L+Refrigerator', delivery: 'Free delivery in 6 days' },
     ],
@@ -661,8 +661,8 @@ const baseProducts: Product[] = [
       'ThinQ app for remote temperature control',
     ],
     prices: [
-      { store: 'Flipkart', price: 115990, url: 'https://www.flipkart.com/search?q=LG+688L+Side+by+Side+InstaView+Refrigerator', delivery: 'Free delivery in 5 days' },
-      { store: 'Amazon', price: 117490, url: 'https://www.amazon.in/s?k=LG+688L+Side+by+Side+InstaView+Refrigerator', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 115990, url: 'https://www.flipkart.com/search?q=688L+Side-by-Side+Refrigerator+with+InstaView', delivery: 'Free delivery in 5 days' },
+      { store: 'Amazon', price: 117490, url: 'https://www.amazon.in/s?k=688L+Side-by-Side+Refrigerator+with+InstaView', delivery: 'Free delivery in 4 days' },
       { store: 'Croma', price: 119990, url: 'https://www.croma.com/searchB?q=LG+688L+Side+by+Side+Refrigerator', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 120990, url: 'https://www.reliancedigital.in/search?q=LG+688L+InstaView+Refrigerator', delivery: 'Free delivery in 6 days' },
     ],
@@ -708,8 +708,8 @@ const baseProducts: Product[] = [
       'Certified for Indian voltage fluctuations (100V-290V)',
     ],
     prices: [
-      { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/haier-320l-double-door-refrigerator/p/itmh8c0d9e6a3b', delivery: 'Free delivery in 3 days' },
-      { store: 'Amazon', price: 33490, url: 'https://www.amazon.in/dp/B0C7LMNPQR', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/search?q=320L+Double+Door+Refrigerator+%28HEF-323FSGS%29', delivery: 'Free delivery in 3 days' },
+      { store: 'Amazon', price: 33490, url: 'https://www.amazon.in/s?k=320L+Double+Door+Refrigerator+%28HEF-323FSGS%29', delivery: 'Free delivery in 4 days' },
       { store: 'Croma', price: 34990, url: 'https://www.croma.com/haier-320l-refrigerator/p/283610', delivery: 'Free delivery in 3 days' },
       { store: 'Reliance Digital', price: 34490, url: 'https://www.reliancedigital.in/haier-320l-hrb-3404pkg-e/p/493283610', delivery: 'Free delivery in 4 days' },
     ],
@@ -791,7 +791,7 @@ const baseProducts: Product[] = [
       'FreshFlow Air Tower',
     ],
     prices: [
-     { store: 'Flipkart', price: 41990, url: 'https://www.flipkart.com/whirlpool-340l-double-door-refrigerator/p/itm654321', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 41990, url: 'https://www.flipkart.com/search?q=340L+Double+Door+Refrigerator+%28IF+INV+CNV+340+ELT%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 42990, url: 'https://www.amazon.in/s?k=340L+Double+Door+Refrigerator+%28IF+INV+CNV+340+ELT%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 43990, url: 'https://www.croma.com/whirlpool-340l-double-door-refrigerator/p/654321', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 42490, url: 'https://www.reliancedigital.in/whirlpool-340l-double-door-refrigerator/p/654321987', delivery: 'Free delivery in 4 days' },
@@ -832,7 +832,7 @@ const baseProducts: Product[] = [
       'Toughened glass shelves',
     ],
     prices: [
-     { store: 'Flipkart', price: 45990, url: 'https://www.flipkart.com/panasonic-360l-double-door-refrigerator/p/itm987123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 45990, url: 'https://www.flipkart.com/search?q=360L+Double+Door+Refrigerator+%28NR-BS60GKX1%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 46990, url: 'https://www.amazon.in/s?k=360L+Double+Door+Refrigerator+%28NR-BS60GKX1%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 47990, url: 'https://www.croma.com/panasonic-360l-double-door-refrigerator/p/987123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 46490, url: 'https://www.reliancedigital.in/panasonic-360l-double-door-refrigerator/p/987123654', delivery: 'Free delivery in 4 days' },
@@ -873,7 +873,7 @@ const baseProducts: Product[] = [
       'Multi Airflow system',
     ],
     prices: [
-     { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/bosch-347l-double-door-refrigerator/p/itm456789', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/search?q=347L+Double+Door+Refrigerator+%28KDN43VL20I%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 55990, url: 'https://www.amazon.in/s?k=347L+Double+Door+Refrigerator+%28KDN43VL20I%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 56990, url: 'https://www.croma.com/bosch-347l-double-door-refrigerator/p/456789', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 55490, url: 'https://www.reliancedigital.in/bosch-347l-double-door-refrigerator/p/456789123', delivery: 'Free delivery in 4 days' },
@@ -913,7 +913,7 @@ const baseProducts: Product[] = [
       'Antibacterial gasket',
     ],
     prices: [
-     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/samsung-253l-double-door-refrigerator/p/itm321987', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/search?q=253L+Double+Door+Refrigerator+%28RT28A3453S8%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 30990, url: 'https://www.amazon.in/s?k=253L+Double+Door+Refrigerator+%28RT28A3453S8%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 31990, url: 'https://www.croma.com/samsung-253l-double-door-refrigerator/p/321987', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 30490, url: 'https://www.reliancedigital.in/samsung-253l-double-door-refrigerator/p/321987654', delivery: 'Free delivery in 4 days' },
@@ -953,7 +953,7 @@ const baseProducts: Product[] = [
       'Antibacterial gasket',
     ],
     prices: [
-     { store: 'Flipkart', price: 31990, url: 'https://www.flipkart.com/lg-260l-double-door-refrigerator/p/itm654123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 31990, url: 'https://www.flipkart.com/search?q=260L+Double+Door+Refrigerator+%28GL-D261ABEU%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 32990, url: 'https://www.amazon.in/s?k=260L+Double+Door+Refrigerator+%28GL-D261ABEU%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 33990, url: 'https://www.croma.com/lg-260l-double-door-refrigerator/p/654123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 32490, url: 'https://www.reliancedigital.in/lg-260l-double-door-refrigerator/p/654123987', delivery: 'Free delivery in 4 days' },
@@ -994,7 +994,7 @@ const baseProducts: Product[] = [
       'LED lighting',
     ],
     prices: [
-     { store: 'Flipkart', price: 47990, url: 'https://www.flipkart.com/electrolux-340l-double-door-refrigerator/p/itm789456', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 47990, url: 'https://www.flipkart.com/search?q=340L+Double+Door+Refrigerator+%28EB3400WS%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 48990, url: 'https://www.amazon.in/s?k=340L+Double+Door+Refrigerator+%28EB3400WS%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 49990, url: 'https://www.croma.com/electrolux-340l-double-door-refrigerator/p/789456', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 48490, url: 'https://www.reliancedigital.in/electrolux-340l-double-door-refrigerator/p/789456123', delivery: 'Free delivery in 4 days' },
@@ -1087,7 +1087,7 @@ const baseProducts: Product[] = [
       'Toughened glass shelves',
     ],
     prices: [
-     { store: 'Flipkart', price: 27990, url: 'https://www.flipkart.com/haier-320l-double-door-refrigerator/p/itm234567', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 27990, url: 'https://www.flipkart.com/search?q=320L+Double+Door+Refrigerator+%28HRB-3404BS-R%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 28990, url: 'https://www.amazon.in/s?k=320L+Double+Door+Refrigerator+%28HRB-3404BS-R%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 29490, url: 'https://www.croma.com/haier-320l-double-door-refrigerator/p/234567', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 29990, url: 'https://www.reliancedigital.in/haier-320l-double-door-refrigerator/p/234567890', delivery: 'Free delivery in 4 days' },
@@ -1134,7 +1134,7 @@ const baseProducts: Product[] = [
       'Tempered glass shelves',
     ],
     prices: [
-     { store: 'Flipkart', price: 45990, url: 'https://www.flipkart.com/panasonic-360l-side-by-side-refrigerator/p/itm345678', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 45990, url: 'https://www.flipkart.com/search?q=360L+Side+by+Side+Refrigerator+%28NR-TL371V%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 46990, url: 'https://www.amazon.in/s?k=360L+Side+by+Side+Refrigerator+%28NR-TL371V%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 47490, url: 'https://www.croma.com/panasonic-360l-side-by-side-refrigerator/p/345678', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 47990, url: 'https://www.reliancedigital.in/panasonic-360l-side-by-side-refrigerator/p/345678901', delivery: 'Free delivery in 4 days' },
@@ -1181,7 +1181,7 @@ const baseProducts: Product[] = [
       'LED lighting',
     ],
     prices: [
-     { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/bosch-300l-french-door-refrigerator/p/itm456789', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 54990, url: 'https://www.flipkart.com/search?q=300L+French+Door+Refrigerator+%28KDN30V21IN%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 55990, url: 'https://www.amazon.in/s?k=300L+French+Door+Refrigerator+%28KDN30V21IN%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 56490, url: 'https://www.croma.com/bosch-300l-french-door-refrigerator/p/456789', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 56990, url: 'https://www.reliancedigital.in/bosch-300l-french-door-refrigerator/p/456789012', delivery: 'Free delivery in 4 days' },
@@ -1228,7 +1228,7 @@ const baseProducts: Product[] = [
       'Lock and key',
     ],
     prices: [
-     { store: 'Flipkart', price: 12990, url: 'https://www.flipkart.com/videocon-190l-single-door-refrigerator/p/itm567890', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 12990, url: 'https://www.flipkart.com/search?q=190L+Single+Door+Refrigerator+%28VC205%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 13490, url: 'https://www.amazon.in/s?k=190L+Single+Door+Refrigerator+%28VC205%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 13990, url: 'https://www.croma.com/videocon-190l-single-door-refrigerator/p/567890', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 14490, url: 'https://www.reliancedigital.in/videocon-190l-single-door-refrigerator/p/567890123', delivery: 'Free delivery in 4 days' },
@@ -1275,7 +1275,7 @@ const baseProducts: Product[] = [
       'Toughened glass shelves',
     ],
     prices: [
-     { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/kelvinator-280l-double-door-refrigerator/p/itm678901', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/search?q=280L+Double+Door+Refrigerator+%28KRD-A280%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 22990, url: 'https://www.amazon.in/s?k=280L+Double+Door+Refrigerator+%28KRD-A280%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 23490, url: 'https://www.croma.com/kelvinator-280l-double-door-refrigerator/p/678901', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 23990, url: 'https://www.reliancedigital.in/kelvinator-280l-double-door-refrigerator/p/678901234', delivery: 'Free delivery in 4 days' },
@@ -1322,7 +1322,7 @@ const baseProducts: Product[] = [
       'Mechanical temperature control',
     ],
     prices: [
-     { store: 'Flipkart', price: 10990, url: 'https://www.flipkart.com/mitashi-180l-single-door-refrigerator/p/itm789012', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 10990, url: 'https://www.flipkart.com/search?q=180L+Single+Door+Refrigerator+%28MSD018RF100%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 11490, url: 'https://www.amazon.in/s?k=180L+Single+Door+Refrigerator+%28MSD018RF100%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 11990, url: 'https://www.croma.com/mitashi-180l-single-door-refrigerator/p/789012', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 12490, url: 'https://www.reliancedigital.in/mitashi-180l-single-door-refrigerator/p/789012345', delivery: 'Free delivery in 4 days' },
@@ -1369,7 +1369,7 @@ const baseProducts: Product[] = [
       'Stabilizer free operation',
     ],
     prices: [
-     { store: 'Flipkart', price: 24990, url: 'https://www.flipkart.com/samsung-253l-double-door-refrigerator/p/itm890123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 24990, url: 'https://www.flipkart.com/search?q=253L+Double+Door+Refrigerator+%28RT28A3453S8%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 25990, url: 'https://www.amazon.in/s?k=253L+Double+Door+Refrigerator+%28RT28A3453S8%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 26490, url: 'https://www.croma.com/samsung-253l-double-door-refrigerator/p/890123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 26990, url: 'https://www.reliancedigital.in/samsung-253l-double-door-refrigerator/p/890123456', delivery: 'Free delivery in 4 days' },
@@ -1416,7 +1416,7 @@ const baseProducts: Product[] = [
       'Toughened glass shelves',
     ],
     prices: [
-     { store: 'Flipkart', price: 23990, url: 'https://www.flipkart.com/lg-260l-double-door-refrigerator/p/itm901234', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 23990, url: 'https://www.flipkart.com/search?q=260L+Double+Door+Refrigerator+%28GL-D261RPZU%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 24990, url: 'https://www.amazon.in/s?k=260L+Double+Door+Refrigerator+%28GL-D261RPZU%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 25490, url: 'https://www.croma.com/lg-260l-double-door-refrigerator/p/901234', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 25990, url: 'https://www.reliancedigital.in/lg-260l-double-door-refrigerator/p/901234567', delivery: 'Free delivery in 4 days' },
@@ -1463,7 +1463,7 @@ const baseProducts: Product[] = [
       'Stabilizer free operation',
     ],
     prices: [
-     { store: 'Flipkart', price: 22990, url: 'https://www.flipkart.com/whirlpool-265l-double-door-refrigerator/p/itm012345', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 22990, url: 'https://www.flipkart.com/search?q=265L+Double+Door+Refrigerator+%28IF+INV+CNV+278+ELT%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 23990, url: 'https://www.amazon.in/s?k=265L+Double+Door+Refrigerator+%28IF+INV+CNV+278+ELT%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 24490, url: 'https://www.croma.com/whirlpool-265l-double-door-refrigerator/p/012345', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 24990, url: 'https://www.reliancedigital.in/whirlpool-265l-double-door-refrigerator/p/012345678', delivery: 'Free delivery in 4 days' },
@@ -2428,8 +2428,8 @@ const baseProducts: Product[] = [
       'Turbo Wash 360 for complete cleaning in 39 minutes',
     ],
     prices: [
-      { store: 'Flipkart', price: 55990, url: 'https://www.flipkart.com/search?q=LG+8kg+5+Star+AI+Direct+Drive+Front+Load+Washing+Machine', delivery: 'Free delivery in 3 days' },
-      { store: 'Amazon', price: 56990, url: 'https://www.amazon.in/s?k=LG+8kg+Front+Load+AI+Direct+Drive+Washing+Machine', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 55990, url: 'https://www.flipkart.com/search?q=8+kg+5+Star+Wi-Fi+AI+Direct+Drive+Front+Load+Washing+Machine', delivery: 'Free delivery in 3 days' },
+      { store: 'Amazon', price: 56990, url: 'https://www.amazon.in/s?k=8+kg+5+Star+Wi-Fi+AI+Direct+Drive+Front+Load+Washing+Machine', delivery: 'Free delivery in 4 days' },
       { store: 'Croma', price: 57990, url: 'https://www.croma.com/searchB?q=LG+8kg+Front+Load+Washing+Machine', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 58490, url: 'https://www.reliancedigital.in/search?q=LG+8kg+Front+Load+Washing+Machine', delivery: 'Free delivery in 5 days' },
     ],
@@ -2478,8 +2478,8 @@ const baseProducts: Product[] = [
       'Add Garment feature - pause and add missed items',
     ],
     prices: [
-      { store: 'Flipkart', price: 48990, url: 'https://www.flipkart.com/search?q=Samsung+7kg+5+Star+EcoBubble+Front+Load+Washing+Machine', delivery: 'Free delivery in 2 days' },
-      { store: 'Amazon', price: 49490, url: 'https://www.amazon.in/s?k=Samsung+7kg+Front+Load+EcoBubble+Washing+Machine', delivery: 'Free delivery in 3 days' },
+      { store: 'Flipkart', price: 48990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28WW70T4020CE%29', delivery: 'Free delivery in 2 days' },
+      { store: 'Amazon', price: 49490, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28WW70T4020CE%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 50990, url: 'https://www.croma.com/searchB?q=Samsung+7kg+Front+Load+Washing+Machine', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 51490, url: 'https://www.reliancedigital.in/search?q=Samsung+7kg+Front+Load+Washing+Machine', delivery: 'Free delivery in 4 days' },
     ],
@@ -2578,7 +2578,7 @@ const baseProducts: Product[] = [
       'Reload function to add forgotten items',
     ],
     prices: [
-      { store: 'Flipkart', price: 59990, url: 'https://www.flipkart.com/bosch-8kg-front-load-washing-machine/p/itm234567', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 59990, url: 'https://www.flipkart.com/search?q=8+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28WAJ2846WIN%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 60990, url: 'https://www.amazon.in/s?k=8+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28WAJ2846WIN%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 61990, url: 'https://www.croma.com/bosch-8kg-front-load-washing-machine/p/234567', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 60490, url: 'https://www.reliancedigital.in/bosch-8kg-front-load-washing-machine/p/234567890', delivery: 'Free delivery in 4 days' },
@@ -2628,7 +2628,7 @@ const baseProducts: Product[] = [
       'Made in India for Indian conditions',
     ],
     prices: [
-      { store: 'Flipkart', price: 38990, url: 'https://www.flipkart.com/godrej-7kg-front-load-washing-machine/p/itm345678', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 38990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28Eon%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 39990, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28Eon%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 40990, url: 'https://www.croma.com/godrej-7kg-front-load-washing-machine/p/345678', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 39490, url: 'https://www.reliancedigital.in/godrej-7kg-front-load-washing-machine/p/345678901', delivery: 'Free delivery in 4 days' },
@@ -2678,7 +2678,7 @@ const baseProducts: Product[] = [
       '4 year comprehensive warranty',
     ],
     prices: [
-      { store: 'Flipkart', price: 51990, url: 'https://www.flipkart.com/ifb-8kg-front-load-washing-machine/p/itm456789', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 51990, url: 'https://www.flipkart.com/search?q=8+kg+5+Star+Aqua+Energie+Front+Load+Washing+Machine', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 52990, url: 'https://www.amazon.in/s?k=8+kg+5+Star+Aqua+Energie+Front+Load+Washing+Machine', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 53990, url: 'https://www.croma.com/ifb-8kg-front-load-washing-machine/p/456789', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 52490, url: 'https://www.reliancedigital.in/ifb-8kg-front-load-washing-machine/p/456789012', delivery: 'Free delivery in 4 days' },
@@ -2728,7 +2728,7 @@ const baseProducts: Product[] = [
       'Economic wash for small loads',
     ],
     prices: [
-      { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/panasonic-7kg-front-load-washing-machine/p/itm567890', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28NA-F70A1HRB%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 45990, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28NA-F70A1HRB%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 46990, url: 'https://www.croma.com/panasonic-7kg-front-load-washing-machine/p/567890', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 45490, url: 'https://www.reliancedigital.in/panasonic-7kg-front-load-washing-machine/p/567890123', delivery: 'Free delivery in 4 days' },
@@ -2778,7 +2778,7 @@ const baseProducts: Product[] = [
       'Healthier+ program with steam',
     ],
     prices: [
-      { store: 'Flipkart', price: 28990, url: 'https://www.flipkart.com/lg-6-5kg-top-load-washing-machine/p/itm678901', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 28990, url: 'https://www.flipkart.com/search?q=6.5+kg+5+Star+Smart+Inverter+Top+Load+Washing+Machine+%28T65SKSF4Z%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 29990, url: 'https://www.amazon.in/s?k=6.5+kg+5+Star+Smart+Inverter+Top+Load+Washing+Machine+%28T65SKSF4Z%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 30990, url: 'https://www.croma.com/lg-6-5kg-top-load-washing-machine/p/678901', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 29490, url: 'https://www.reliancedigital.in/lg-6-5kg-top-load-washing-machine/p/678901234', delivery: 'Free delivery in 4 days' },
@@ -2828,7 +2828,7 @@ const baseProducts: Product[] = [
       'Delay end for flexible timing',
     ],
     prices: [
-      { store: 'Flipkart', price: 25990, url: 'https://www.flipkart.com/samsung-6kg-top-load-washing-machine/p/itm789012', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 25990, url: 'https://www.flipkart.com/search?q=6+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28WA65A4002VS%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 26990, url: 'https://www.amazon.in/s?k=6+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28WA65A4002VS%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 27990, url: 'https://www.croma.com/samsung-6kg-top-load-washing-machine/p/789012', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 26490, url: 'https://www.reliancedigital.in/samsung-6kg-top-load-washing-machine/p/789012345', delivery: 'Free delivery in 4 days' },
@@ -2878,7 +2878,7 @@ const baseProducts: Product[] = [
       'ZPF technology for fabric care',
     ],
     prices: [
-      { store: 'Flipkart', price: 24990, url: 'https://www.flipkart.com/whirlpool-7kg-top-load-washing-machine/p/itm890123', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 24990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28360+Bloomwash%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 25990, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28360+Bloomwash%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 26990, url: 'https://www.croma.com/whirlpool-7kg-top-load-washing-machine/p/890123', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 25490, url: 'https://www.reliancedigital.in/whirlpool-7kg-top-load-washing-machine/p/890123456', delivery: 'Free delivery in 4 days' },
@@ -2928,7 +2928,7 @@ const baseProducts: Product[] = [
       'Low noise operation',
     ],
     prices: [
-      { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/godrej-6-2kg-top-load-washing-machine/p/itm901234', delivery: 'Free delivery in 2 days' },
+      { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/search?q=6.2+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28WT+EON+620+AP+GP%29', delivery: 'Free delivery in 2 days' },
       { store: 'Amazon', price: 22990, url: 'https://www.amazon.in/s?k=6.2+kg+5+Star+Inverter+Top+Load+Washing+Machine+%28WT+EON+620+AP+GP%29', delivery: 'Free delivery in 3 days' },
       { store: 'Croma', price: 23990, url: 'https://www.croma.com/godrej-6-2kg-top-load-washing-machine/p/901234', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 22490, url: 'https://www.reliancedigital.in/godrej-6-2kg-top-load-washing-machine/p/901234567', delivery: 'Free delivery in 4 days' },
@@ -3593,8 +3593,8 @@ const baseProducts: Product[] = [
       'IFB Express Wash - full 8kg load in 59 minutes',
     ],
     prices: [
-      { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/search?q=IFB+Senator+WXS+8kg+Front+Load+Washing+Machine', delivery: 'Free delivery in 3 days' },
-      { store: 'Amazon', price: 45490, url: 'https://www.amazon.in/s?k=IFB+Senator+8kg+Front+Load+Washing+Machine', delivery: 'Free delivery in 4 days' },
+      { store: 'Flipkart', price: 44990, url: 'https://www.flipkart.com/search?q=Senator+WXS+8+kg+5+Star+Front+Load+Washing+Machine', delivery: 'Free delivery in 3 days' },
+      { store: 'Amazon', price: 45490, url: 'https://www.amazon.in/s?k=Senator+WXS+8+kg+5+Star+Front+Load+Washing+Machine', delivery: 'Free delivery in 4 days' },
       { store: 'Croma', price: 46990, url: 'https://www.croma.com/searchB?q=IFB+Senator+8kg+Washing+Machine', delivery: 'Same day delivery available' },
       { store: 'Reliance Digital', price: 46490, url: 'https://www.reliancedigital.in/search?q=IFB+Senator+8kg+Front+Load+Washing+Machine', delivery: 'Free delivery in 5 days' },
     ],
@@ -3676,7 +3676,7 @@ const baseProducts: Product[] = [
       'Child lock',
     ],
     prices: [
-     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/lg-6kg-front-load-washing-machine/p/itm654321', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/search?q=6+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28FHP1065M5L%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 35990, url: 'https://www.amazon.in/s?k=6+kg+5+Star+Inverter+Front+Load+Washing+Machine+%28FHP1065M5L%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 36990, url: 'https://www.croma.com/lg-6kg-front-load-washing-machine/p/654321', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 35490, url: 'https://www.reliancedigital.in/lg-6kg-front-load-washing-machine/p/654321987', delivery: 'Free delivery in 4 days' },
@@ -3717,7 +3717,7 @@ const baseProducts: Product[] = [
       'Child lock',
     ],
     prices: [
-     { store: 'Flipkart', price: 22990, url: 'https://www.flipkart.com/whirlpool-7kg-top-load-washing-machine/p/itm987123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 22990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Top+Load+Washing+Machine+%28WHITEMAGIC+ELITE%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 23990, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Top+Load+Washing+Machine+%28WHITEMAGIC+ELITE%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 24990, url: 'https://www.croma.com/whirlpool-7kg-top-load-washing-machine/p/987123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 23490, url: 'https://www.reliancedigital.in/whirlpool-7kg-top-load-washing-machine/p/987123654', delivery: 'Free delivery in 4 days' },
@@ -3758,7 +3758,7 @@ const baseProducts: Product[] = [
       'Delay start',
     ],
     prices: [
-     { store: 'Flipkart', price: 18990, url: 'https://www.flipkart.com/godrej-6kg-top-load-washing-machine/p/itm456789', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 18990, url: 'https://www.flipkart.com/search?q=6+kg+5+Star+Top+Load+Washing+Machine+%28WT+EON+600+PD%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 19990, url: 'https://www.amazon.in/s?k=6+kg+5+Star+Top+Load+Washing+Machine+%28WT+EON+600+PD%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 20990, url: 'https://www.croma.com/godrej-6kg-top-load-washing-machine/p/456789', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 19490, url: 'https://www.reliancedigital.in/godrej-6kg-top-load-washing-machine/p/456789123', delivery: 'Free delivery in 4 days' },
@@ -3799,7 +3799,7 @@ const baseProducts: Product[] = [
       'ActiveWater Plus',
     ],
     prices: [
-     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/bosch-8kg-front-load-washing-machine/p/itm321987', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=8+kg+5+Star+Front+Load+Washing+Machine+%28WAJ2416SIN%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 50990, url: 'https://www.amazon.in/s?k=8+kg+5+Star+Front+Load+Washing+Machine+%28WAJ2416SIN%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 51990, url: 'https://www.croma.com/bosch-8kg-front-load-washing-machine/p/321987', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 50490, url: 'https://www.reliancedigital.in/bosch-8kg-front-load-washing-machine/p/321987654', delivery: 'Free delivery in 4 days' },
@@ -3840,7 +3840,7 @@ const baseProducts: Product[] = [
       'Child lock',
     ],
     prices: [
-     { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/panasonic-6kg-top-load-washing-machine/p/itm654123', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 21990, url: 'https://www.flipkart.com/search?q=6+kg+5+Star+Top+Load+Washing+Machine+%28NA-F60LF1HRB%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 22990, url: 'https://www.amazon.in/s?k=6+kg+5+Star+Top+Load+Washing+Machine+%28NA-F60LF1HRB%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 23990, url: 'https://www.croma.com/panasonic-6kg-top-load-washing-machine/p/654123', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 22490, url: 'https://www.reliancedigital.in/panasonic-6kg-top-load-washing-machine/p/654123987', delivery: 'Free delivery in 4 days' },
@@ -3881,7 +3881,7 @@ const baseProducts: Product[] = [
       'Anti-crease',
     ],
     prices: [
-     { store: 'Flipkart', price: 42990, url: 'https://www.flipkart.com/electrolux-7kg-front-load-washing-machine/p/itm789456', delivery: 'Free delivery in 2 days' },
+     { store: 'Flipkart', price: 42990, url: 'https://www.flipkart.com/search?q=7+kg+5+Star+Front+Load+Washing+Machine+%28EWF7042BD%29', delivery: 'Free delivery in 2 days' },
      { store: 'Amazon', price: 43990, url: 'https://www.amazon.in/s?k=7+kg+5+Star+Front+Load+Washing+Machine+%28EWF7042BD%29', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 44990, url: 'https://www.croma.com/electrolux-7kg-front-load-washing-machine/p/789456', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 43490, url: 'https://www.reliancedigital.in/electrolux-7kg-front-load-washing-machine/p/789456123', delivery: 'Free delivery in 4 days' },
@@ -3934,8 +3934,8 @@ const baseProducts: Product[] = [
       'Gaming features: HDMI 2.1, ALLM, VRR',
     ],
     prices: [
-     { store: 'Flipkart', price: 89990, url: 'https://www.flipkart.com/lg-139-cm-55-inch-ultra-hd-4k-oled-smart-webos-tv/p/itm39fd5782ee49c', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 91990, url: 'https://www.amazon.in/dp/B09TPW9Q8M', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 89990, url: 'https://www.flipkart.com/search?q=C1+Series+55%22+4K+OLED+Smart+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 91990, url: 'https://www.amazon.in/s?k=C1+Series+55%22+4K+OLED+Smart+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 92990, url: 'https://www.croma.com/lg-139cm-55-inch-4k-oled-smart-webos-tv/p/265747', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 93990, url: 'https://www.reliancedigital.in/lg-139cm-55-4k-oled-smart-webos-tv/p/493163641', delivery: 'Free delivery in 4 days' },
     ],
@@ -3988,8 +3988,8 @@ const baseProducts: Product[] = [
       'Slim design with bezel-less look',
     ],
     prices: [
-     { store: 'Flipkart', price: 69990, url: 'https://www.flipkart.com/samsung-138-cm-55-inch-ultra-hd-4k-qled-smart-tizen-tv/p/itm39fd5782ee49d', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 71990, url: 'https://www.amazon.in/dp/B09TPW9Q8N', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 69990, url: 'https://www.flipkart.com/search?q=Q60B+55%22+4K+QLED+Smart+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 71990, url: 'https://www.amazon.in/s?k=Q60B+55%22+4K+QLED+Smart+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 72990, url: 'https://www.croma.com/samsung-138cm-55-inch-4k-qled-smart-tizen-tv/p/265748', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 73990, url: 'https://www.reliancedigital.in/samsung-138cm-55-4k-qled-smart-tizen-tv/p/493163642', delivery: 'Free delivery in 4 days' },
     ],
@@ -4042,8 +4042,8 @@ const baseProducts: Product[] = [
       'Gaming mode with ALLM support',
     ],
     prices: [
-     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/tcl-139-cm-55-inch-ultra-hd-4k-qled-smart-android-tv/p/itm39fd5782ee49e', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 51990, url: 'https://www.amazon.in/dp/B09TPW9Q8O', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 49990, url: 'https://www.flipkart.com/search?q=55C725+55%22+4K+QLED+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 51990, url: 'https://www.amazon.in/s?k=55C725+55%22+4K+QLED+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 52990, url: 'https://www.croma.com/tcl-139cm-55-inch-4k-qled-smart-android-tv/p/265749', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 53990, url: 'https://www.reliancedigital.in/tcl-139cm-55-4k-qled-smart-android-tv/p/493163643', delivery: 'Free delivery in 4 days' },
     ],
@@ -4096,8 +4096,8 @@ const baseProducts: Product[] = [
       'OxygenPlay platform for content',
     ],
     prices: [
-     { store: 'Flipkart', price: 39990, url: 'https://www.flipkart.com/oneplus-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49f', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 41990, url: 'https://www.amazon.in/dp/B09TPW9Q8P', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 39990, url: 'https://www.flipkart.com/search?q=Y1S+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 41990, url: 'https://www.amazon.in/s?k=Y1S+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 42990, url: 'https://www.croma.com/oneplus-139cm-55-inch-4k-led-smart-android-tv/p/265750', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 43990, url: 'https://www.reliancedigital.in/oneplus-139cm-55-4k-led-smart-android-tv/p/493163644', delivery: 'Free delivery in 4 days' },
     ],
@@ -4150,8 +4150,8 @@ const baseProducts: Product[] = [
       'Mi Quick Wake for instant start',
     ],
     prices: [
-     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/mi-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49g', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 36990, url: 'https://www.amazon.in/dp/B09TPW9Q8Q', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 34990, url: 'https://www.flipkart.com/search?q=5X+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 36990, url: 'https://www.amazon.in/s?k=5X+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 37990, url: 'https://www.croma.com/mi-139cm-55-inch-4k-led-smart-android-tv/p/265751', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 38990, url: 'https://www.reliancedigital.in/mi-139cm-55-4k-led-smart-android-tv/p/493163645', delivery: 'Free delivery in 4 days' },
     ],
@@ -4204,8 +4204,8 @@ const baseProducts: Product[] = [
       'Slim bezel design',
     ],
     prices: [
-     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/vu-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49h', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 31990, url: 'https://www.amazon.in/dp/B09TPW9Q8R', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 29990, url: 'https://www.flipkart.com/search?q=Premium+4K+55%22+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 31990, url: 'https://www.amazon.in/s?k=Premium+4K+55%22+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 32990, url: 'https://www.croma.com/vu-139cm-55-inch-4k-led-smart-android-tv/p/265752', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 33990, url: 'https://www.reliancedigital.in/vu-139cm-55-4k-led-smart-android-tv/p/493163646', delivery: 'Free delivery in 4 days' },
     ],
@@ -4258,8 +4258,8 @@ const baseProducts: Product[] = [
       'Gaming mode support',
     ],
     prices: [
-     { store: 'Flipkart', price: 27990, url: 'https://www.flipkart.com/realme-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49i', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 29990, url: 'https://www.amazon.in/dp/B09TPW9Q8S', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 27990, url: 'https://www.flipkart.com/search?q=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 29990, url: 'https://www.amazon.in/s?k=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 30990, url: 'https://www.croma.com/realme-139cm-55-inch-4k-led-smart-android-tv/p/265753', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 31990, url: 'https://www.reliancedigital.in/realme-139cm-55-4k-led-smart-android-tv/p/493163647', delivery: 'Free delivery in 4 days' },
     ],
@@ -4312,8 +4312,8 @@ const baseProducts: Product[] = [
       'Gaming mode with low latency',
     ],
     prices: [
-     { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/acer-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49j', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 34990, url: 'https://www.amazon.in/dp/B09TPW9Q8T', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 32990, url: 'https://www.flipkart.com/search?q=Series+S+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 34990, url: 'https://www.amazon.in/s?k=Series+S+55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 35990, url: 'https://www.croma.com/acer-139cm-55-inch-4k-led-smart-android-tv/p/265754', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 36990, url: 'https://www.reliancedigital.in/acer-139cm-55-4k-led-smart-android-tv/p/493163648', delivery: 'Free delivery in 4 days' },
     ],
@@ -4366,8 +4366,8 @@ const baseProducts: Product[] = [
       'Wall mount compatible',
     ],
     prices: [
-     { store: 'Flipkart', price: 25990, url: 'https://www.flipkart.com/kodak-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49k', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 27990, url: 'https://www.amazon.in/dp/B09TPW9Q8U', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 25990, url: 'https://www.flipkart.com/search?q=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 27990, url: 'https://www.amazon.in/s?k=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 28990, url: 'https://www.croma.com/kodak-139cm-55-inch-4k-led-smart-android-tv/p/265755', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 29990, url: 'https://www.reliancedigital.in/kodak-139cm-55-4k-led-smart-android-tv/p/493163649', delivery: 'Free delivery in 4 days' },
     ],
@@ -4420,8 +4420,8 @@ const baseProducts: Product[] = [
       'Multiple connectivity options',
     ],
     prices: [
-     { store: 'Flipkart', price: 31990, url: 'https://www.flipkart.com/motorola-139-cm-55-inch-ultra-hd-4k-led-smart-android-tv/p/itm39fd5782ee49l', delivery: 'Free delivery in 2 days' },
-     { store: 'Amazon', price: 33990, url: 'https://www.amazon.in/dp/B09TPW9Q8V', delivery: 'Free delivery in 3 days' },
+     { store: 'Flipkart', price: 31990, url: 'https://www.flipkart.com/search?q=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 2 days' },
+     { store: 'Amazon', price: 33990, url: 'https://www.amazon.in/s?k=55%22+4K+LED+Smart+Android+TV', delivery: 'Free delivery in 3 days' },
      { store: 'Croma', price: 34990, url: 'https://www.croma.com/motorola-139cm-55-inch-4k-led-smart-android-tv/p/265756', delivery: 'Same day delivery available' },
      { store: 'Reliance Digital', price: 35990, url: 'https://www.reliancedigital.in/motorola-139cm-55-4k-led-smart-android-tv/p/493163650', delivery: 'Free delivery in 4 days' },
     ],
