@@ -127,7 +127,7 @@ export default function Home() {
                 ))
               ) : (
                 <div className="px-4 py-5 text-sm text-[#8B949E]">
-                  No results found for "{query}". Try a different brand, model, or category.
+                  No results found for "{query}". Try a different brand or catrgory, model, or category.
                 </div>
               )}
             </div>
