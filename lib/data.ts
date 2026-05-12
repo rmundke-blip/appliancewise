@@ -49,10 +49,10 @@ const baseProducts: Product[] = [
     mrp: 79900,
     rating: 4.3,
     reviewCount: 2846,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Best Seller',
     energyRating: '4 Star',
@@ -106,10 +106,10 @@ const baseProducts: Product[] = [
     mrp: 72900,
     rating: 4.2,
     reviewCount: 3421,
-    image: 'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
-      'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Great Value',
     energyRating: '4 Star',
@@ -163,7 +163,7 @@ const baseProducts: Product[] = [
     mrp: 95000,
     rating: 4.4,
     reviewCount: 1893,
-    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
       'https://www.lg.com/in/images/tvs/md07535050/gallery/medium01.jpg',
       'https://www.lg.com/in/images/tvs/md07535050/gallery/medium02.jpg',
@@ -220,9 +220,9 @@ const baseProducts: Product[] = [
     mrp: 64999,
     rating: 4.1,
     reviewCount: 4532,
-    image: 'https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Best Budget',
     energyRating: '3 Star',
@@ -276,9 +276,9 @@ const baseProducts: Product[] = [
     mrp: 56999,
     rating: 4.0,
     reviewCount: 6234,
-    image: 'https://images.unsplash.com/photo-1619802771913-4bdbbc558a99?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1619802771913-4bdbbc558a99?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Most Popular',
     energyRating: '3 Star',
@@ -330,9 +330,9 @@ const baseProducts: Product[] = [
     mrp: 49990,
     rating: 4.1,
     reviewCount: 3456,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     energyRating: '3 Star',
     specs: {
@@ -382,9 +382,9 @@ const baseProducts: Product[] = [
     mrp: 44990,
     rating: 3.9,
     reviewCount: 2876,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     energyRating: '3 Star',
     specs: {
@@ -433,9 +433,9 @@ const baseProducts: Product[] = [
     mrp: 39990,
     rating: 4.0,
     reviewCount: 4123,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     energyRating: '3 Star',
     specs: {
@@ -484,9 +484,9 @@ const baseProducts: Product[] = [
     mrp: 37990,
     rating: 3.8,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     energyRating: '3 Star',
     specs: {
@@ -535,9 +535,9 @@ const baseProducts: Product[] = [
     mrp: 59990,
     rating: 4.2,
     reviewCount: 5234,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     energyRating: '4 Star',
     specs: {
@@ -729,9 +729,9 @@ const baseProducts: Product[] = [
     mrp: 48000,
     rating: 4.0,
     reviewCount: 987,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '3 Star',
     specs: {
@@ -770,9 +770,9 @@ const baseProducts: Product[] = [
     mrp: 52000,
     rating: 4.2,
     reviewCount: 1456,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '4 Star',
     specs: {
@@ -811,9 +811,9 @@ const baseProducts: Product[] = [
     mrp: 58000,
     rating: 4.3,
     reviewCount: 876,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '4 Star',
     specs: {
@@ -852,9 +852,9 @@ const baseProducts: Product[] = [
     mrp: 70000,
     rating: 4.4,
     reviewCount: 654,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '4 Star',
     specs: {
@@ -893,9 +893,9 @@ const baseProducts: Product[] = [
     mrp: 38000,
     rating: 4.1,
     reviewCount: 1234,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '3 Star',
     specs: {
@@ -933,9 +933,9 @@ const baseProducts: Product[] = [
     mrp: 40000,
     rating: 4.0,
     reviewCount: 987,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '3 Star',
     specs: {
@@ -973,9 +973,9 @@ const baseProducts: Product[] = [
     mrp: 60000,
     rating: 4.2,
     reviewCount: 543,
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     energyRating: '4 Star',
     specs: {
@@ -1015,9 +1015,9 @@ const baseProducts: Product[] = [
     mrp: 24990,
     rating: 4.1,
     reviewCount: 1450,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Best Seller',
     energyRating: '3 Star',
@@ -1062,9 +1062,9 @@ const baseProducts: Product[] = [
     mrp: 36990,
     rating: 4.2,
     reviewCount: 1200,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Energy Efficient',
     energyRating: '4 Star',
@@ -1109,9 +1109,9 @@ const baseProducts: Product[] = [
     mrp: 59990,
     rating: 4.4,
     reviewCount: 890,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Premium',
     energyRating: '4 Star',
@@ -1156,9 +1156,9 @@ const baseProducts: Product[] = [
     mrp: 72990,
     rating: 4.5,
     reviewCount: 650,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'German Quality',
     energyRating: '4 Star',
@@ -1203,9 +1203,9 @@ const baseProducts: Product[] = [
     mrp: 16990,
     rating: 3.8,
     reviewCount: 980,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Budget Friendly',
     energyRating: '2 Star',
@@ -1250,9 +1250,9 @@ const baseProducts: Product[] = [
     mrp: 28990,
     rating: 4.0,
     reviewCount: 750,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Reliable',
     energyRating: '3 Star',
@@ -1297,9 +1297,9 @@ const baseProducts: Product[] = [
     mrp: 14990,
     rating: 3.6,
     reviewCount: 620,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Entry Level',
     energyRating: '2 Star',
@@ -1344,9 +1344,9 @@ const baseProducts: Product[] = [
     mrp: 32990,
     rating: 4.3,
     reviewCount: 1100,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Smart Features',
     energyRating: '3 Star',
@@ -1391,9 +1391,9 @@ const baseProducts: Product[] = [
     mrp: 31990,
     rating: 4.2,
     reviewCount: 950,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'Smart Inverter',
     energyRating: '4 Star',
@@ -1438,9 +1438,9 @@ const baseProducts: Product[] = [
     mrp: 30990,
     rating: 4.1,
     reviewCount: 850,
-    image: 'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?refrigerator',
     images: [
-      'https://images.unsplash.com/photo-1584568694244-14e3f4c0b4b5?w=600&q=80',
+      'https://source.unsplash.com/600x400/?refrigerator',
     ],
     badge: 'IntelliSense',
     energyRating: '3 Star',
@@ -1583,9 +1583,9 @@ const baseProducts: Product[] = [
     mrp: 65000,
     rating: 4.3,
     reviewCount: 1876,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '5 Star',
     specs: {
@@ -1626,9 +1626,9 @@ const baseProducts: Product[] = [
     mrp: 68000,
     rating: 4.4,
     reviewCount: 1654,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '5 Star',
     specs: {
@@ -1669,9 +1669,9 @@ const baseProducts: Product[] = [
     mrp: 45000,
     rating: 4.0,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '3 Star',
     specs: {
@@ -1712,9 +1712,9 @@ const baseProducts: Product[] = [
     mrp: 70000,
     rating: 4.5,
     reviewCount: 1432,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '5 Star',
     specs: {
@@ -1755,9 +1755,9 @@ const baseProducts: Product[] = [
     mrp: 72000,
     rating: 4.4,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '5 Star',
     specs: {
@@ -1798,9 +1798,9 @@ const baseProducts: Product[] = [
     mrp: 73000,
     rating: 4.5,
     reviewCount: 2156,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '5 Star',
     specs: {
@@ -1841,9 +1841,9 @@ const baseProducts: Product[] = [
     mrp: 49000,
     rating: 4.1,
     reviewCount: 1876,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '3 Star',
     specs: {
@@ -1884,9 +1884,9 @@ const baseProducts: Product[] = [
     mrp: 48000,
     rating: 4.0,
     reviewCount: 1654,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     energyRating: '3 Star',
     specs: {
@@ -1928,9 +1928,9 @@ const baseProducts: Product[] = [
     mrp: 38990,
     rating: 4.0,
     reviewCount: 1250,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Window AC',
     energyRating: '3 Star',
@@ -1975,9 +1975,9 @@ const baseProducts: Product[] = [
     mrp: 56990,
     rating: 4.3,
     reviewCount: 1580,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Japanese Quality',
     energyRating: '5 Star',
@@ -2023,9 +2023,9 @@ const baseProducts: Product[] = [
     mrp: 42990,
     rating: 4.1,
     reviewCount: 1420,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Anti-Bacterial',
     energyRating: '3 Star',
@@ -2070,9 +2070,9 @@ const baseProducts: Product[] = [
     mrp: 60990,
     rating: 4.4,
     reviewCount: 1350,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Wi-Fi Enabled',
     energyRating: '5 Star',
@@ -2118,9 +2118,9 @@ const baseProducts: Product[] = [
     mrp: 64990,
     rating: 4.5,
     reviewCount: 1680,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'WindFree Technology',
     energyRating: '5 Star',
@@ -2166,9 +2166,9 @@ const baseProducts: Product[] = [
     mrp: 59990,
     rating: 4.4,
     reviewCount: 1520,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Dual Inverter',
     energyRating: '5 Star',
@@ -2213,9 +2213,9 @@ const baseProducts: Product[] = [
     mrp: 44990,
     rating: 4.0,
     reviewCount: 1380,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Copper Condenser',
     energyRating: '3 Star',
@@ -2259,9 +2259,9 @@ const baseProducts: Product[] = [
     mrp: 57990,
     rating: 4.3,
     reviewCount: 1240,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Indian Brand',
     energyRating: '5 Star',
@@ -2306,9 +2306,9 @@ const baseProducts: Product[] = [
     mrp: 55990,
     rating: 4.2,
     reviewCount: 1160,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Flexi Cool',
     energyRating: '5 Star',
@@ -2353,9 +2353,9 @@ const baseProducts: Product[] = [
     mrp: 41990,
     rating: 4.0,
     reviewCount: 1080,
-    image: 'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?air conditioner',
     images: [
-      'https://images.unsplash.com/photo-1584611958957-667e1e3b5b8?w=600&q=80',
+      'https://source.unsplash.com/600x400/?air conditioner',
     ],
     badge: 'Copper Rich',
     energyRating: '3 Star',
@@ -2500,9 +2500,9 @@ const baseProducts: Product[] = [
     mrp: 54990,
     rating: 4.2,
     reviewCount: 1456,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Supreme Care',
     energyRating: '5 Star',
@@ -2550,9 +2550,9 @@ const baseProducts: Product[] = [
     mrp: 79990,
     rating: 4.4,
     reviewCount: 1234,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'German Engineering',
     energyRating: '5 Star',
@@ -2600,9 +2600,9 @@ const baseProducts: Product[] = [
     mrp: 49990,
     rating: 4.1,
     reviewCount: 1123,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Made in India',
     energyRating: '5 Star',
@@ -2650,9 +2650,9 @@ const baseProducts: Product[] = [
     mrp: 69990,
     rating: 4.3,
     reviewCount: 1345,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Aqua Energie',
     energyRating: '5 Star',
@@ -2700,9 +2700,9 @@ const baseProducts: Product[] = [
     mrp: 59990,
     rating: 4.2,
     reviewCount: 1189,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Japanese Technology',
     energyRating: '5 Star',
@@ -2750,9 +2750,9 @@ const baseProducts: Product[] = [
     mrp: 38990,
     rating: 4.3,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Smart Inverter',
     energyRating: '5 Star',
@@ -2800,9 +2800,9 @@ const baseProducts: Product[] = [
     mrp: 34990,
     rating: 4.2,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Digital Inverter',
     energyRating: '5 Star',
@@ -2850,9 +2850,9 @@ const baseProducts: Product[] = [
     mrp: 33990,
     rating: 4.1,
     reviewCount: 1765,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: '360 Bloomwash',
     energyRating: '5 Star',
@@ -2900,9 +2900,9 @@ const baseProducts: Product[] = [
     mrp: 29990,
     rating: 4.0,
     reviewCount: 1456,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     badge: 'Made in India',
     energyRating: '5 Star',
@@ -3093,9 +3093,9 @@ const baseProducts: Product[] = [
     mrp: 25000,
     rating: 4.2,
     reviewCount: 3456,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '8 L',
@@ -3131,9 +3131,9 @@ const baseProducts: Product[] = [
     mrp: 20000,
     rating: 4.0,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '7 L',
@@ -3169,9 +3169,9 @@ const baseProducts: Product[] = [
     mrp: 22000,
     rating: 4.1,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '7 L',
@@ -3207,9 +3207,9 @@ const baseProducts: Product[] = [
     mrp: 18000,
     rating: 4.0,
     reviewCount: 1654,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '6 L',
@@ -3245,9 +3245,9 @@ const baseProducts: Product[] = [
     mrp: 21000,
     rating: 4.1,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '7 L',
@@ -3283,9 +3283,9 @@ const baseProducts: Product[] = [
     mrp: 26000,
     rating: 4.2,
     reviewCount: 1876,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '8 L',
@@ -3321,9 +3321,9 @@ const baseProducts: Product[] = [
     mrp: 17000,
     rating: 3.9,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     specs: {
       'Capacity': '6 L',
@@ -3360,9 +3360,9 @@ const baseProducts: Product[] = [
     mrp: 19990,
     rating: 4.2,
     reviewCount: 1876,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     badge: 'Advanced Filtration',
     energyRating: '',
@@ -3401,9 +3401,9 @@ const baseProducts: Product[] = [
     mrp: 23990,
     rating: 4.3,
     reviewCount: 1654,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     badge: 'Zero Bacteria',
     energyRating: '',
@@ -3442,9 +3442,9 @@ const baseProducts: Product[] = [
     mrp: 17990,
     rating: 4.0,
     reviewCount: 1432,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     badge: 'Budget Friendly',
     energyRating: '',
@@ -3483,9 +3483,9 @@ const baseProducts: Product[] = [
     mrp: 21990,
     rating: 4.1,
     reviewCount: 1234,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     badge: 'Galaxy Series',
     energyRating: '',
@@ -3524,9 +3524,9 @@ const baseProducts: Product[] = [
     mrp: 22990,
     rating: 4.2,
     reviewCount: 1567,
-    image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?water purifier',
     images: [
-      'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80',
+      'https://source.unsplash.com/600x400/?water purifier',
     ],
     badge: 'Trusted Brand',
     energyRating: '',
@@ -3614,9 +3614,9 @@ const baseProducts: Product[] = [
     mrp: 52000,
     rating: 4.3,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3655,9 +3655,9 @@ const baseProducts: Product[] = [
     mrp: 45000,
     rating: 4.4,
     reviewCount: 2345,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3696,9 +3696,9 @@ const baseProducts: Product[] = [
     mrp: 30000,
     rating: 4.1,
     reviewCount: 3456,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3737,9 +3737,9 @@ const baseProducts: Product[] = [
     mrp: 25000,
     rating: 4.0,
     reviewCount: 1987,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3778,9 +3778,9 @@ const baseProducts: Product[] = [
     mrp: 65000,
     rating: 4.5,
     reviewCount: 1234,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3819,9 +3819,9 @@ const baseProducts: Product[] = [
     mrp: 28000,
     rating: 4.2,
     reviewCount: 1654,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3860,9 +3860,9 @@ const baseProducts: Product[] = [
     mrp: 55000,
     rating: 4.3,
     reviewCount: 987,
-    image: 'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?washing machine',
     images: [
-      'https://images.unsplash.com/photo-1626806787426-5910811b6325?w=600&q=80',
+      'https://source.unsplash.com/600x400/?washing machine',
     ],
     energyRating: '5 Star',
     specs: {
@@ -3902,10 +3902,10 @@ const baseProducts: Product[] = [
     mrp: 119990,
     rating: 4.6,
     reviewCount: 1850,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Premium',
     energyRating: '5 Star',
@@ -3956,10 +3956,10 @@ const baseProducts: Product[] = [
     mrp: 89990,
     rating: 4.4,
     reviewCount: 2100,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Best Value',
     energyRating: '4 Star',
@@ -4010,10 +4010,10 @@ const baseProducts: Product[] = [
     mrp: 69990,
     rating: 4.2,
     reviewCount: 1650,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Budget Friendly',
     energyRating: '3 Star',
@@ -4064,10 +4064,10 @@ const baseProducts: Product[] = [
     mrp: 54990,
     rating: 4.1,
     reviewCount: 1950,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Smart Choice',
     energyRating: '3 Star',
@@ -4118,10 +4118,10 @@ const baseProducts: Product[] = [
     mrp: 49990,
     rating: 4.0,
     reviewCount: 2200,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Popular',
     energyRating: '3 Star',
@@ -4172,10 +4172,10 @@ const baseProducts: Product[] = [
     mrp: 39990,
     rating: 3.9,
     reviewCount: 1800,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Affordable',
     energyRating: '2 Star',
@@ -4226,10 +4226,10 @@ const baseProducts: Product[] = [
     mrp: 37990,
     rating: 3.8,
     reviewCount: 1600,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Entry Level',
     energyRating: '2 Star',
@@ -4280,10 +4280,10 @@ const baseProducts: Product[] = [
     mrp: 44990,
     rating: 4.0,
     reviewCount: 1400,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'New Brand',
     energyRating: '3 Star',
@@ -4334,10 +4334,10 @@ const baseProducts: Product[] = [
     mrp: 34990,
     rating: 3.7,
     reviewCount: 1300,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Budget',
     energyRating: '2 Star',
@@ -4388,10 +4388,10 @@ const baseProducts: Product[] = [
     mrp: 42990,
     rating: 3.9,
     reviewCount: 1200,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
+    image: 'https://source.unsplash.com/600x400/?smart tv',
     images: [
-      'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
-      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80',
+      'https://source.unsplash.com/600x400/?smart tv',
+      'https://source.unsplash.com/600x400/?smart tv',
     ],
     badge: 'Reliable',
     energyRating: '3 Star',
@@ -4585,7 +4585,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 57990,
           rating: 4.4,
           reviewCount: 320,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Bosch+Dishwasher',
+          image: 'https://source.unsplash.com/600x400/?dishwasher',
           specs: {
             'Capacity': '12 Place settings',
             'Wash Programs': '6',
@@ -4610,7 +4610,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 51990,
           rating: 4.2,
           reviewCount: 210,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=IFB+Dishwasher',
+          image: 'https://source.unsplash.com/600x400/?dishwasher',
           specs: {
             'Capacity': '12 Place settings',
             'Wash Programs': '5',
@@ -4635,7 +4635,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 53990,
           rating: 4.3,
           reviewCount: 250,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=LG+Dishwasher',
+          image: 'https://source.unsplash.com/600x400/?dishwasher',
           specs: {
             'Capacity': '14 Place settings',
             'Wash Programs': '6',
@@ -4663,7 +4663,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 12990,
           rating: 4.1,
           reviewCount: 410,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=IFB+Microwave',
+          image: 'https://source.unsplash.com/600x400/?microwave',
           specs: {
             'Capacity': '30 L',
             'Type': 'Convection',
@@ -4688,7 +4688,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 14990,
           rating: 4.2,
           reviewCount: 520,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Samsung+Microwave',
+          image: 'https://source.unsplash.com/600x400/?microwave',
           specs: {
             'Capacity': '32 L',
             'Type': 'Convection',
@@ -4713,7 +4713,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 13990,
           rating: 4.0,
           reviewCount: 320,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=LG+Microwave',
+          image: 'https://source.unsplash.com/600x400/?microwave',
           specs: {
             'Capacity': '28 L',
             'Type': 'Convection',
@@ -4741,7 +4741,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 24990,
           rating: 4.3,
           reviewCount: 920,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Philips+Air+Purifier',
+          image: 'https://source.unsplash.com/600x400/?air purifier',
           specs: {
             'Coverage Area': '79 sqm',
             'Filters': 'HEPA + Carbon',
@@ -4766,7 +4766,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 18990,
           rating: 4.1,
           reviewCount: 780,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Honeywell+Air+Purifier',
+          image: 'https://source.unsplash.com/600x400/?air purifier',
           specs: {
             'Coverage Area': '64 sqm',
             'Filters': 'HEPA + Carbon',
@@ -4791,7 +4791,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 15990,
           rating: 4.0,
           reviewCount: 860,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Xiaomi+Air+Purifier',
+          image: 'https://source.unsplash.com/600x400/?air purifier',
           specs: {
             'Coverage Area': '48 sqm',
             'Filters': 'HEPA + Carbon',
@@ -4819,7 +4819,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 49990,
           rating: 4.5,
           reviewCount: 420,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Dyson+Vacuum',
+          image: 'https://source.unsplash.com/600x400/?vacuum cleaner',
           specs: {
             'Type': 'Cordless Stick',
             'Power': '525 W',
@@ -4844,7 +4844,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 16990,
           rating: 4.1,
           reviewCount: 680,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Eureka+Vacuum',
+          image: 'https://source.unsplash.com/600x400/?vacuum cleaner',
           specs: {
             'Type': 'Canister',
             'Power': '2200 W',
@@ -4869,7 +4869,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 12990,
           rating: 4.0,
           reviewCount: 540,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Philips+Vacuum',
+          image: 'https://source.unsplash.com/600x400/?vacuum cleaner',
           specs: {
             'Type': 'Canister',
             'Power': '1900 W',
@@ -4897,7 +4897,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 15990,
           rating: 4.2,
           reviewCount: 610,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Havells+Geyser',
+          image: 'https://source.unsplash.com/600x400/?geyser',
           specs: {
             'Capacity': '15 L',
             'Type': 'Storage',
@@ -4922,7 +4922,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 13990,
           rating: 4.1,
           reviewCount: 470,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Racold+Geyser',
+          image: 'https://source.unsplash.com/600x400/?geyser',
           specs: {
             'Capacity': '10 L',
             'Type': 'Storage',
@@ -4947,7 +4947,7 @@ function getCategoryPlaceholders(categorySlug: Product['categorySlug']): Placeho
           mrp: 12990,
           rating: 4.0,
           reviewCount: 540,
-          image: 'https://placehold.co/600x400/1F2937/00D4AA?text=Bajaj+Geyser',
+          image: 'https://source.unsplash.com/600x400/?geyser',
           specs: {
             'Capacity': '15 L',
             'Type': 'Storage',
