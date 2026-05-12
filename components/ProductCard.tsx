@@ -33,7 +33,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
     } else {
       const added = addToCompare(product.id);
       if (!added) {
-        setCompareMsg('Max 3 products');
+        setCompareMsg('Max 4 products');
         setTimeout(() => setCompareMsg(''), 2000);
       } else {
         setInCompare(true);
