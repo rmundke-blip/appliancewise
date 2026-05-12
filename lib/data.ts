@@ -48,7 +48,7 @@ export const products: Product[] = [
     price: 62990,
     mrp: 79900,
     rating: 4.3,
-    reviewCount: 2847,
+    reviewCount: 2846,
     image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
     images: [
       'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=600&q=80',
