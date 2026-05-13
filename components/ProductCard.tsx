@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import { Star, GitCompare, ExternalLink, ShoppingCart } from 'lucide-react';
 import { type Product, formatPrice, getDiscount, getProductPrimaryImage } from '@/lib/data';
 import { addToCompare, removeFromCompare, isInCompare, getCompareIds } from '@/lib/compare-store';
-import { toast } from '@/hooks/use-toast';
 
 type Props = {
   product: Product;
@@ -18,6 +17,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
   const [inCompare, setInCompare] = useState(false);
   const discount = getDiscount(product.price, product.mrp);
   const imageSrc = getProductPrimaryImage(product);
+  const router = useRouter();
 
   useEffect(() => {
     setInCompare(isInCompare(product.id));
@@ -26,37 +26,43 @@ export default function ProductCard({ product, showCompare = true, compact = fal
     return () => window.removeEventListener('compare-updated', update);
   }, [product.id]);
 
-  const router = useRouter();
-
   const handleCompare = (e: React.MouseEvent) => {
     e.preventDefault();
+
+    // --- Remove flow ---
     if (inCompare) {
       removeFromCompare(product.id);
+      window.dispatchEvent(new CustomEvent('compare-updated'));
       setInCompare(false);
       return;
     }
 
+    // --- Add flow ---
     const added = addToCompare(product.id);
+
+    // Already at 3 — can't add more
     if (!added) {
-      toast({
-        title: 'Compare limit reached',
-        description: 'You can compare up to 3 products. Remove one before adding another.',
-      });
+      window.dispatchEvent(
+        new CustomEvent('compare-toast', { detail: { count: 3, limitReached: true } })
+      );
       return;
     }
 
+    window.dispatchEvent(new CustomEvent('compare-updated'));
+    setInCompare(true);
+
     const compareCount = getCompareIds().length;
-    if (compareCount === 3) {
+
+    // 3rd product added → navigate directly
+    if (compareCount >= 3) {
       router.push('/compare');
       return;
     }
 
-    const remaining = 3 - compareCount;
-    toast({
-      title: 'Added to compare',
-      description: `Add ${remaining} more product${remaining === 1 ? '' : 's'} to open the compare page.`,
-    });
-    setInCompare(true);
+    // 1st or 2nd product added → show toast
+    window.dispatchEvent(
+      new CustomEvent('compare-toast', { detail: { count: compareCount } })
+    );
   };
 
   return (
