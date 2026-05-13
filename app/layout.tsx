@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans } from 'next/font/google';
+import { Toaster } from '@/components/ui/toaster';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="font-sans bg-[#0D1117] text-[#E6EDF3] antialiased">
         {children}
+        <Toaster />
       </body>
     </html>
   );

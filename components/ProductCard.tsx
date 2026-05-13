@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Star, GitCompare, ExternalLink, ShoppingCart } from 'lucide-react';
 import { type Product, formatPrice, getDiscount, getProductPrimaryImage } from '@/lib/data';
-import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
+import { addToCompare, removeFromCompare, isInCompare, getCompareIds } from '@/lib/compare-store';
+import { toast } from '@/hooks/use-toast';
 
 type Props = {
   product: Product;
@@ -14,7 +16,6 @@ type Props = {
 
 export default function ProductCard({ product, showCompare = true, compact = false }: Props) {
   const [inCompare, setInCompare] = useState(false);
-  const [compareMsg, setCompareMsg] = useState('');
   const discount = getDiscount(product.price, product.mrp);
   const imageSrc = getProductPrimaryImage(product);
 
@@ -25,20 +26,37 @@ export default function ProductCard({ product, showCompare = true, compact = fal
     return () => window.removeEventListener('compare-updated', update);
   }, [product.id]);
 
+  const router = useRouter();
+
   const handleCompare = (e: React.MouseEvent) => {
     e.preventDefault();
     if (inCompare) {
       removeFromCompare(product.id);
       setInCompare(false);
-    } else {
-      const added = addToCompare(product.id);
-      if (!added) {
-        setCompareMsg('Max 4 products');
-        setTimeout(() => setCompareMsg(''), 2000);
-      } else {
-        setInCompare(true);
-      }
+      return;
     }
+
+    const added = addToCompare(product.id);
+    if (!added) {
+      toast({
+        title: 'Compare limit reached',
+        description: 'You can compare up to 3 products. Remove one before adding another.',
+      });
+      return;
+    }
+
+    const compareCount = getCompareIds().length;
+    if (compareCount === 3) {
+      router.push('/compare');
+      return;
+    }
+
+    const remaining = 3 - compareCount;
+    toast({
+      title: 'Added to compare',
+      description: `Add ${remaining} more product${remaining === 1 ? '' : 's'} to open the compare page.`,
+    });
+    setInCompare(true);
   };
 
   return (
@@ -140,7 +158,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
           {showCompare && (
             <button
               onClick={handleCompare}
-              title={compareMsg || (inCompare ? 'Remove from compare' : 'Add to compare')}
+              title={inCompare ? 'Remove from compare' : 'Add to compare'}
               className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium transition-all border ${
                 inCompare
                   ? 'bg-[#00D4AA]/15 text-[#00D4AA] border-[#00D4AA]/40'
@@ -148,7 +166,7 @@ export default function ProductCard({ product, showCompare = true, compact = fal
               }`}
             >
               <GitCompare size={13} />
-              {compareMsg || (inCompare ? 'Added' : 'Compare')}
+              {inCompare ? 'Added' : 'Compare'}
             </button>
           )}
         </div>

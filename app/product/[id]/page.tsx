@@ -1,12 +1,13 @@
 'use client';
 import Link from 'next/link';
+import { useRouter, useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
 import { ArrowLeft, Star, ShoppingCart, GitCompare, Zap, Shield, X, ChevronLeft, ChevronRight, ExternalLink, ThumbsUp, ThumbsDown, CircleCheck as CheckCircle, TrendingDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getProductById, formatPrice, getDiscount, getProductPrimaryImage, type Product, getBestBuyUrl } from '@/lib/data';
-import { addToCompare, removeFromCompare, isInCompare } from '@/lib/compare-store';
+import { addToCompare, removeFromCompare, isInCompare, getCompareIds } from '@/lib/compare-store';
+import { toast } from '@/hooks/use-toast';
 import Breadcrumb from '@/components/Breadcrumb';
 
 const storeLogos: Record<string, string> = {
@@ -26,6 +27,7 @@ export default function ProductPage() {
   const [inCompare, setInCompare] = useState(false);
   const [showAllReviews, setShowAllReviews] = useState(false);
   const [compareMsg, setCompareMsg] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     const p = getProductById(id);
@@ -45,16 +47,30 @@ export default function ProductPage() {
 
   const handleCompare = () => {
     if (!product) return;
+
     if (inCompare) {
       removeFromCompare(product.id);
-    } else {
-      const added = addToCompare(product.id);
-      if (!added) {
-        setCompareMsg('Max 3 products in compare. Remove one first.');
-        setTimeout(() => setCompareMsg(''), 3000);
-        return;
-      }
+      return;
     }
+
+    const added = addToCompare(product.id);
+    if (!added) {
+      setCompareMsg('Max 3 products in compare. Remove one first.');
+      setTimeout(() => setCompareMsg(''), 3000);
+      return;
+    }
+
+    const compareCount = getCompareIds().length;
+    if (compareCount === 3) {
+      router.push('/compare');
+      return;
+    }
+
+    const remaining = 3 - compareCount;
+    toast({
+      title: 'Added to compare',
+      description: `Add ${remaining} more product${remaining === 1 ? '' : 's'} to open the compare page.`,
+    });
   };
 
   if (!product) {
