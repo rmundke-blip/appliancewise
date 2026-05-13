@@ -152,8 +152,22 @@ export default function Navbar() {
                       onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
                       className="flex items-center gap-3 flex-1 min-w-0"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0">
-                        <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
+                      <div className="w-10 h-10 rounded-lg bg-[#0D1117] overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <img 
+                          src={getProductPrimaryImage(product)} 
+                          alt={product.name} 
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            const alternateImages = product.images.filter(img => img !== getProductPrimaryImage(product));
+                            if (alternateImages.length > 0) {
+                              img.src = alternateImages[0];
+                            } else {
+                              img.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&q=80';
+                            }
+                          }}
+                        />
                       </div>
                       <div className="min-w-0">
                         <p className="text-sm font-medium text-[#E6EDF3] truncate">{product.brand} {product.name}</p>

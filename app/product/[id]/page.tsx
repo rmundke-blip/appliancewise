@@ -116,15 +116,26 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
 
           <div>
-            <div className="relative bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden aspect-[4/3]">
+            <div className="relative bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center">
               <img
                 src={product.images[activeImage] || getProductPrimaryImage(product)}
                 alt={product.name}
                 className="w-full h-full object-contain p-4"
+                loading="eager"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = 'https://placehold.co/600x400/1F2937/00D4AA?text=' + encodeURIComponent(product.brand);
+                  // Try next image in array
+                  const currentIndex = parseInt(target.dataset.index || '0');
+                  const nextIndex = currentIndex + 1;
+                  if (nextIndex < product.images.length && product.images[nextIndex]) {
+                    target.dataset.index = nextIndex.toString();
+                    target.src = product.images[nextIndex];
+                  } else {
+                    // Fallback to a generic image
+                    target.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&q=80';
+                  }
                 }}
+                data-index="0"
               />
               {product.images.length > 1 && (
                 <>

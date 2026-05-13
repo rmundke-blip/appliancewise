@@ -147,8 +147,22 @@ export default function ComparePage() {
                     >
                       <X size={13} />
                     </button>
-                    <div className="h-36 bg-gradient-to-br from-[#1F2937] to-[#111827] overflow-hidden">
-                      <img src={getProductPrimaryImage(product)} alt={product.name} className="w-full h-full object-cover" />
+                    <div className="h-36 bg-gradient-to-br from-[#1F2937] to-[#111827] overflow-hidden flex items-center justify-center">
+                      <img 
+                        src={getProductPrimaryImage(product)} 
+                        alt={product.name} 
+                        className="w-full h-full object-contain p-2"
+                        loading="lazy"
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement;
+                          const alternateImages = product.images.filter(img => img !== getProductPrimaryImage(product));
+                          if (alternateImages.length > 0) {
+                            img.src = alternateImages[0];
+                          } else {
+                            img.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&q=80';
+                          }
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="p-3">

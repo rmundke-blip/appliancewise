@@ -88,9 +88,17 @@ export default function ProductCard({ product, showCompare = true, compact = fal
             src={imageSrc}
             alt={product.name}
             className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
             onError={(e) => {
-              (e.target as HTMLImageElement).src =
-                `https://placehold.co/400x300/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+              const img = e.target as HTMLImageElement;
+              // Try alternate images from product.images array
+              const alternateImages = product.images.filter(img => img !== imageSrc);
+              if (alternateImages.length > 0) {
+                img.src = alternateImages[0];
+              } else {
+                // Use a generic appliance image from Unsplash
+                img.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&q=80';
+              }
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#161B22]/30 to-transparent" />

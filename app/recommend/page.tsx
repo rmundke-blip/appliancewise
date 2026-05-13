@@ -149,8 +149,15 @@ export default function RecommendPage() {
                         src={getProductPrimaryImage(product)}
                         alt={product.name}
                         className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src = `https://placehold.co/400x300/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
+                          const img = e.target as HTMLImageElement;
+                          const alternateImages = product.images.filter(img => img !== getProductPrimaryImage(product));
+                          if (alternateImages.length > 0) {
+                            img.src = alternateImages[0];
+                          } else {
+                            img.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&q=80';
+                          }
                         }}
                       />
                     </div>
