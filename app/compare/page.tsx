@@ -1,179 +1,12 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { X, Plus, Star, Zap, CircleCheck as CheckCircle, Circle as XCircle, Sparkles, GitCompare, ShoppingCart } from 'lucide-react';
+import { X, Plus, Star, Zap, CircleCheck as CheckCircle, Sparkles, GitCompare, ShoppingCart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getProductById, formatPrice, getProductPrimaryImage, type Product } from '@/lib/data';
 import { getCompareIds, removeFromCompare, clearCompare } from '@/lib/compare-store';
-
-// ─── Toast Types ─────────────────────────────────────────────────────────────
-
-interface ToastData {
-  id: string;
-  count: number; // how many products are currently in compare (1 or 2)
-}
-
-// ─── Custom Event for triggering toast from anywhere ─────────────────────────
-// Dispatch this from product cards after adding to compare:
-//   window.dispatchEvent(new CustomEvent('compare-toast', { detail: { count: newCount } }));
-
-// ─── Toast Component ──────────────────────────────────────────────────────────
-
-function CompareToast({ toast, onClose }: { toast: ToastData; onClose: (id: string) => void }) {
-  const [exiting, setExiting] = useState(false);
-  const [progress, setProgress] = useState(100);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const DURATION = 7000;
-
-  const handleClose = useCallback(() => {
-    setExiting(true);
-    setTimeout(() => onClose(toast.id), 300);
-  }, [toast.id, onClose]);
-
-  useEffect(() => {
-    const start = Date.now();
-    timerRef.current = setInterval(() => {
-      const elapsed = Date.now() - start;
-      const remaining = Math.max(0, 100 - (elapsed / DURATION) * 100);
-      setProgress(remaining);
-      if (remaining === 0) {
-        if (timerRef.current) clearInterval(timerRef.current);
-        handleClose();
-      }
-    }, 50);
-
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [handleClose]);
-
-  const remaining = toast.count === 1 ? 2 : 1;
-  const message =
-    toast.count === 1
-      ? `Add ${remaining} more product${remaining > 1 ? 's' : ''} to compare`
-      : `Add ${remaining} more product to compare`;
-
-  return (
-    <div
-      style={{
-        animation: exiting
-          ? 'toastSlideOut 0.3s cubic-bezier(0.4, 0, 1, 1) forwards'
-          : 'toastSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
-      }}
-      className="relative w-full max-w-sm overflow-hidden rounded-2xl border border-[#30363D] bg-[#161B22] shadow-2xl shadow-black/50"
-    >
-      {/* Progress bar */}
-      <div
-        className="absolute top-0 left-0 h-[2px] bg-[#00D4AA] transition-none"
-        style={{ width: `${progress}%`, transition: 'width 0.05s linear' }}
-      />
-
-      <div className="p-4 pr-10">
-        {/* Icon + main message */}
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-[#00D4AA]/15 border border-[#00D4AA]/25 flex items-center justify-center mt-0.5">
-            <GitCompare size={14} className="text-[#00D4AA]" />
-          </div>
-          <div className="flex-1 min-w-0">
-            {/* Dots indicator */}
-            <div className="flex items-center gap-1.5 mb-2">
-              {[1, 2, 3].map((slot) => (
-                <div
-                  key={slot}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    slot <= toast.count
-                      ? 'w-5 bg-[#00D4AA]'
-                      : 'w-3 bg-[#30363D]'
-                  }`}
-                />
-              ))}
-              <span className="text-[10px] text-[#8B949E] ml-1 font-medium">
-                {toast.count}/3 added
-              </span>
-            </div>
-
-            <p className="text-[#E6EDF3] text-sm font-medium leading-snug">
-              {message},{' '}
-              <Link
-                href="/compare"
-                onClick={() => onClose(toast.id)}
-                className="text-[#00D4AA] underline underline-offset-2 decoration-[#00D4AA]/40 hover:decoration-[#00D4AA] transition-all font-semibold"
-              >
-                or click here to compare now
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Close button */}
-      <button
-        onClick={handleClose}
-        aria-label="Dismiss notification"
-        className="absolute top-3 right-3 w-6 h-6 rounded-lg flex items-center justify-center text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#30363D] transition-all"
-      >
-        <X size={13} />
-      </button>
-    </div>
-  );
-}
-
-// ─── Toast Container (mount this in your layout or _app) ─────────────────────
-// Export separately so it can be placed in the layout once.
-
-export function CompareToastContainer() {
-  const [toasts, setToasts] = useState<ToastData[]>([]);
-  const router = useRouter();
-
-  const removeToast = useCallback((id: string) => {
-    setToasts((prev) => prev.filter((t) => t.id !== id));
-  }, []);
-
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const { count } = (e as CustomEvent<{ count: number }>).detail;
-
-      if (count >= 3) {
-        // Navigate immediately on 3rd product
-        router.push('/compare');
-        return;
-      }
-
-      // Replace existing toast (only show one at a time)
-      setToasts([{ id: `toast-${Date.now()}`, count }]);
-    };
-
-    window.addEventListener('compare-toast', handler);
-    return () => window.removeEventListener('compare-toast', handler);
-  }, [router]);
-
-  if (toasts.length === 0) return null;
-
-  return (
-    <>
-      <style>{`
-        @keyframes toastSlideIn {
-          from { opacity: 0; transform: translateY(16px) scale(0.96); }
-          to   { opacity: 1; transform: translateY(0)    scale(1);    }
-        }
-        @keyframes toastSlideOut {
-          from { opacity: 1; transform: translateY(0)    scale(1);    }
-          to   { opacity: 0; transform: translateY(8px)  scale(0.96); }
-        }
-      `}</style>
-      <div className="fixed bottom-6 right-4 sm:right-6 z-[9999] flex flex-col gap-3 items-end">
-        {toasts.map((toast) => (
-          <CompareToast key={toast.id} toast={toast} onClose={removeToast} />
-        ))}
-      </div>
-    </>
-  );
-}
-
-// ─── Compare Specs ────────────────────────────────────────────────────────────
 
 const COMPARE_SPECS = [
   { key: 'price', label: 'Price', format: (p: Product) => formatPrice(p.price), isBest: (vals: Product[]) => vals.reduce((best, p) => p.price < best.price ? p : best, vals[0]) },
@@ -199,8 +32,6 @@ function getAIVerdict(products: Product[]): string {
 
   return `Based on rating, sentiment analysis, and value for money, ${bestValue.brand} ${bestValue.name.split(' ').slice(0, 3).join(' ')} is the best choice${reasons.length > 0 ? ' — it has ' + reasons.join(', ') : ''}. ${bestValue.sentiment.positive}% of users recommend it.`;
 }
-
-// ─── Main Compare Page ────────────────────────────────────────────────────────
 
 export default function ComparePage() {
   const [compareProducts, setCompareProducts] = useState<Product[]>([]);
@@ -263,13 +94,10 @@ export default function ComparePage() {
       <Navbar />
 
       <main className="pt-20 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mt-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#E6EDF3]">Compare Products</h1>
-            <p className="text-[#8B949E] mt-1">
-              {compareProducts.length} of 3 slots used
-            </p>
+            <p className="text-[#8B949E] mt-1">{compareProducts.length} of 3 slots used</p>
           </div>
           <div className="flex gap-3 flex-wrap">
             <button
@@ -289,7 +117,6 @@ export default function ComparePage() {
           </div>
         </div>
 
-        {/* AI Verdict */}
         {showVerdict && verdict && (
           <div className="mb-8 bg-[#00D4AA]/10 border border-[#00D4AA]/30 rounded-2xl p-6">
             <div className="flex items-start gap-3">
@@ -307,14 +134,10 @@ export default function ComparePage() {
           </div>
         )}
 
-        {/* Product headers */}
         <div className="overflow-x-auto">
           <div className="min-w-[700px]">
             <div className={`grid gap-4 mb-6 ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}>
-              {/* Empty label col */}
               <div className="hidden sm:block" />
-
-              {/* Product cards */}
               {compareProducts.map(product => (
                 <div key={product.id} className="bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
                   <div className="relative">
@@ -347,8 +170,6 @@ export default function ComparePage() {
                   </div>
                 </div>
               ))}
-
-              {/* Add slot */}
               {compareProducts.length < 3 && (
                 <Link
                   href="/category/tvs"
@@ -362,33 +183,23 @@ export default function ComparePage() {
               )}
             </div>
 
-            {/* Comparison table */}
             <div className="bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
               <div className="p-4 border-b border-[#30363D]">
                 <h2 className="font-semibold text-[#E6EDF3] text-sm">Side-by-Side Comparison</h2>
               </div>
 
-              {/* Key Metrics */}
               {COMPARE_SPECS.map((spec, idx) => {
                 const bestProduct = spec.isBest ? spec.isBest(compareProducts) : null;
-
                 return (
                   <div
                     key={spec.key}
-                    className={`grid gap-4 px-4 py-4 border-b border-[#30363D] last:border-b-0 ${
-                      idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''
-                    } ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
+                    className={`grid gap-4 px-4 py-4 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''} ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
                   >
                     <div className="text-sm text-[#8B949E] font-medium flex items-center">{spec.label}</div>
                     {compareProducts.map(product => {
                       const isBest = bestProduct?.id === product.id && spec.isBest;
                       return (
-                        <div
-                          key={product.id}
-                          className={`text-sm font-semibold flex items-center gap-1.5 ${
-                            isBest ? 'text-[#00D4AA]' : 'text-[#E6EDF3]'
-                          }`}
-                        >
+                        <div key={product.id} className={`text-sm font-semibold flex items-center gap-1.5 ${isBest ? 'text-[#00D4AA]' : 'text-[#E6EDF3]'}`}>
                           {isBest && <Zap size={12} fill="currentColor" className="flex-shrink-0" />}
                           {spec.format(product)}
                         </div>
@@ -399,7 +210,6 @@ export default function ComparePage() {
                 );
               })}
 
-              {/* Specs from actual product specs */}
               <div className="p-4 border-t border-[#30363D] border-b">
                 <p className="text-sm font-semibold text-[#E6EDF3]">Detailed Specifications</p>
               </div>
@@ -408,9 +218,7 @@ export default function ComparePage() {
                 return allKeys.map((key, idx) => (
                   <div
                     key={key}
-                    className={`grid gap-4 px-4 py-3.5 border-b border-[#30363D] last:border-b-0 ${
-                      idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''
-                    } ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
+                    className={`grid gap-4 px-4 py-3.5 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''} ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
                   >
                     <div className="text-xs text-[#8B949E] font-medium flex items-center">{key}</div>
                     {compareProducts.map(product => (
@@ -423,7 +231,6 @@ export default function ComparePage() {
                 ));
               })()}
 
-              {/* Highlights */}
               <div className="p-4 border-t border-[#30363D] border-b">
                 <p className="text-sm font-semibold text-[#E6EDF3]">Key Highlights</p>
               </div>
