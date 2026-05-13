@@ -1,3 +1,4 @@
+import CompareToastContainer from '@/components/CompareToastContainer';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans } from 'next/font/google';
@@ -22,10 +23,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
-      <body className="font-sans bg-[#0D1117] text-[#E6EDF3] antialiased">
+    <html lang="en">
+      <body>
         {children}
-        <Toaster />
+        <CompareToastContainer />  {/* ← add this line */}
       </body>
     </html>
   );
