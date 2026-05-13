@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Search, X, Menu, Zap, GitCompare } from 'lucide-react';
 import { getCompareIds } from '@/lib/compare-store';
-import { products, getProductPrimaryImage, getBestBuyUrl } from '@/lib/data';
+import { products, getProductPrimaryImage } from '@/lib/data';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -160,15 +160,13 @@ export default function Navbar() {
                         <p className="text-xs text-[#8B949E]">{product.category} · ₹{product.price.toLocaleString('en-IN')}</p>
                       </div>
                     </Link>
-                    <a
-                      href={getBestBuyUrl(product)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={`/product/${product.id}`}
                       className="px-2.5 py-1 rounded-lg bg-[#00D4AA]/15 text-[#00D4AA] text-xs font-semibold hover:bg-[#00D4AA]/25 transition-colors flex-shrink-0 whitespace-nowrap"
-                      onClick={(e) => { e.stopPropagation(); setSearchOpen(false); setSearchQuery(''); }}
+                      onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
                     >
                       Buy
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
