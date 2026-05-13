@@ -24,12 +24,10 @@ function getAIVerdict(products: Product[]): string {
     const bestScore = (best.rating * 20) + (best.sentiment.positive * 0.5) + (((best.mrp - best.price) / best.mrp) * 30);
     return score > bestScore ? p : best;
   }, products[0]);
-
   const reasons = [];
   if (bestValue.rating === Math.max(...products.map(p => p.rating))) reasons.push('highest rated');
   if (bestValue.sentiment.positive === Math.max(...products.map(p => p.sentiment.positive))) reasons.push('most positive reviews');
   if (bestValue.price === Math.min(...products.map(p => p.price))) reasons.push('best price');
-
   return `Based on rating, sentiment analysis, and value for money, ${bestValue.brand} ${bestValue.name.split(' ').slice(0, 3).join(' ')} is the best choice${reasons.length > 0 ? ' — it has ' + reasons.join(', ') : ''}. ${bestValue.sentiment.positive}% of users recommend it.`;
 }
 
@@ -61,6 +59,13 @@ export default function ComparePage() {
     setVerdict(getAIVerdict(compareProducts));
     setShowVerdict(true);
   };
+
+  // Filler divs to pad remaining empty product slots
+  const totalSlots = 3;
+  const filledSlots = compareProducts.length;
+  const addSlotShown = filledSlots < totalSlots;
+  // empty fillers = remaining slots after products + add-slot
+  const emptyFillerCount = totalSlots - filledSlots - (addSlotShown ? 1 : 0);
 
   if (compareProducts.length === 0) {
     return (
@@ -94,6 +99,8 @@ export default function ComparePage() {
       <Navbar />
 
       <main className="pt-20 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
+
+        {/* Header */}
         <div className="mt-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#E6EDF3]">Compare Products</h1>
@@ -117,6 +124,7 @@ export default function ComparePage() {
           </div>
         </div>
 
+        {/* AI Verdict */}
         {showVerdict && verdict && (
           <div className="mb-8 bg-[#00D4AA]/10 border border-[#00D4AA]/30 rounded-2xl p-6">
             <div className="flex items-start gap-3">
@@ -136,8 +144,23 @@ export default function ComparePage() {
 
         <div className="overflow-x-auto">
           <div className="min-w-[700px]">
-            <div className={`grid gap-4 mb-6 ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}>
-              <div className="hidden sm:block" />
+
+            {/*
+              ┌─────────────────────────────────────────────────────────┐
+              │  PRODUCT CARDS ROW                                       │
+              │  Uses grid-cols-[200px_1fr_1fr_1fr] so:                 │
+              │  col1 = label spacer (matches table label width)         │
+              │  col2 = product 1  (always left-most)                   │
+              │  col3 = product 2 OR add-slot                           │
+              │  col4 = product 3 OR add-slot OR empty                  │
+              └─────────────────────────────────────────────────────────┘
+            */}
+            <div className="grid gap-4 mb-6" style={{ gridTemplateColumns: '180px 1fr 1fr 1fr' }}>
+
+              {/* Label column spacer — matches the label col in the table below */}
+              <div />
+
+              {/* Product cards — left to right in order added */}
               {compareProducts.map(product => (
                 <div key={product.id} className="bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
                   <div className="relative">
@@ -147,20 +170,14 @@ export default function ComparePage() {
                     >
                       <X size={13} />
                     </button>
-                    <div className="h-36 bg-gradient-to-br from-[#1F2937] to-[#111827] overflow-hidden flex items-center justify-center">
-                      <img 
-                        src={getProductPrimaryImage(product)} 
-                        alt={product.name} 
-                        className="w-full h-full object-contain p-2"
-                        loading="lazy"
+                    <div className="h-36 bg-gradient-to-br from-[#1F2937] to-[#111827] flex items-center justify-center overflow-hidden">
+                      <img
+                        src={getProductPrimaryImage(product)}
+                        alt={product.name}
+                        className="w-full h-full object-contain p-3"
                         onError={(e) => {
-                          const img = e.target as HTMLImageElement;
-                          const alternateImages = product.images.filter(img => img !== getProductPrimaryImage(product));
-                          if (alternateImages.length > 0) {
-                            img.src = alternateImages[0];
-                          } else {
-                            img.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&q=80';
-                          }
+                          (e.target as HTMLImageElement).src =
+                            `https://placehold.co/400x300/1F2937/00D4AA?text=${encodeURIComponent(product.brand)}`;
                         }}
                       />
                     </div>
@@ -184,7 +201,9 @@ export default function ComparePage() {
                   </div>
                 </div>
               ))}
-              {compareProducts.length < 3 && (
+
+              {/* Add slot — immediately after last product, never on left */}
+              {addSlotShown && (
                 <Link
                   href="/category/tvs"
                   className="bg-[#161B22] border-2 border-dashed border-[#30363D] rounded-2xl flex flex-col items-center justify-center gap-2 p-6 min-h-[200px] hover:border-[#00D4AA]/50 hover:bg-[#00D4AA]/5 transition-all group"
@@ -195,19 +214,25 @@ export default function ComparePage() {
                   <p className="text-[#8B949E] text-xs text-center group-hover:text-[#00D4AA] transition-colors">Add product to compare</p>
                 </Link>
               )}
+
+              {/* Invisible fillers to prevent layout breaking (no visible content) */}
+              {Array.from({ length: emptyFillerCount }).map((_, i) => <div key={i} />)}
             </div>
 
+            {/* ── Comparison table — grid-cols-[180px_1fr_1fr_1fr] matching header ── */}
             <div className="bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden">
               <div className="p-4 border-b border-[#30363D]">
                 <h2 className="font-semibold text-[#E6EDF3] text-sm">Side-by-Side Comparison</h2>
               </div>
 
+              {/* Key Metrics */}
               {COMPARE_SPECS.map((spec, idx) => {
                 const bestProduct = spec.isBest ? spec.isBest(compareProducts) : null;
                 return (
                   <div
                     key={spec.key}
-                    className={`grid gap-4 px-4 py-4 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''} ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
+                    className={`grid gap-4 px-4 py-4 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''}`}
+                    style={{ gridTemplateColumns: '180px 1fr 1fr 1fr' }}
                   >
                     <div className="text-sm text-[#8B949E] font-medium flex items-center">{spec.label}</div>
                     {compareProducts.map(product => {
@@ -219,11 +244,12 @@ export default function ComparePage() {
                         </div>
                       );
                     })}
-                    {compareProducts.length < 3 && <div />}
+                    {Array.from({ length: 3 - compareProducts.length }).map((_, i) => <div key={i} />)}
                   </div>
                 );
               })}
 
+              {/* Detailed Specifications */}
               <div className="p-4 border-t border-[#30363D] border-b">
                 <p className="text-sm font-semibold text-[#E6EDF3]">Detailed Specifications</p>
               </div>
@@ -232,7 +258,8 @@ export default function ComparePage() {
                 return allKeys.map((key, idx) => (
                   <div
                     key={key}
-                    className={`grid gap-4 px-4 py-3.5 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''} ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}
+                    className={`grid gap-4 px-4 py-3.5 border-b border-[#30363D] last:border-b-0 ${idx % 2 === 0 ? 'bg-[#0D1117]/30' : ''}`}
+                    style={{ gridTemplateColumns: '180px 1fr 1fr 1fr' }}
                   >
                     <div className="text-xs text-[#8B949E] font-medium flex items-center">{key}</div>
                     {compareProducts.map(product => (
@@ -240,15 +267,19 @@ export default function ComparePage() {
                         {product.specs[key] || <span className="text-[#30363D]">—</span>}
                       </div>
                     ))}
-                    {compareProducts.length < 3 && <div />}
+                    {Array.from({ length: 3 - compareProducts.length }).map((_, i) => <div key={i} />)}
                   </div>
                 ));
               })()}
 
+              {/* Key Highlights */}
               <div className="p-4 border-t border-[#30363D] border-b">
                 <p className="text-sm font-semibold text-[#E6EDF3]">Key Highlights</p>
               </div>
-              <div className={`grid gap-4 px-4 py-4 ${compareProducts.length === 1 ? 'grid-cols-2' : compareProducts.length === 2 ? 'grid-cols-3' : 'grid-cols-4'}`}>
+              <div
+                className="grid gap-4 px-4 py-4"
+                style={{ gridTemplateColumns: '180px 1fr 1fr 1fr' }}
+              >
                 <div />
                 {compareProducts.map(product => (
                   <div key={product.id} className="space-y-2">
@@ -260,9 +291,10 @@ export default function ComparePage() {
                     ))}
                   </div>
                 ))}
-                {compareProducts.length < 3 && <div />}
+                {Array.from({ length: 3 - compareProducts.length }).map((_, i) => <div key={i} />)}
               </div>
             </div>
+
           </div>
         </div>
       </main>
