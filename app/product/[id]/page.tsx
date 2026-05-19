@@ -53,10 +53,22 @@ export default function ProductPage() {
       return;
     }
 
-    const added = addToCompare(product.id);
-    if (!added) {
+    const result = addToCompare(product.id);
+    if (result.status === 'limit') {
       setCompareMsg('Max 3 products in compare. Remove one first.');
       setTimeout(() => setCompareMsg(''), 3000);
+      return;
+    }
+
+    if (result.status === 'category') {
+      toast({
+        title: 'Compare products from same appliance only',
+        description: 'Select products within the same category before comparing.',
+      });
+      return;
+    }
+
+    if (result.status !== 'added') {
       return;
     }
 

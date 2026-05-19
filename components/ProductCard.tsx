@@ -38,17 +38,34 @@ export default function ProductCard({ product, showCompare = true, compact = fal
     }
 
     // --- Add flow ---
-    const added = addToCompare(product.id);
+    const result = addToCompare(product.id);
 
-    // Already at 3 — can't add more
-    if (!added) {
+    if (result.status === 'limit') {
       window.dispatchEvent(
-        new CustomEvent('compare-toast', { detail: { count: 3, limitReached: true } })
+        new CustomEvent('compare-toast', {
+          detail: {
+            message: 'Max 3 products in compare. Remove one first.',
+          },
+        })
       );
       return;
     }
 
-    window.dispatchEvent(new CustomEvent('compare-updated'));
+    if (result.status === 'category') {
+      window.dispatchEvent(
+        new CustomEvent('compare-toast', {
+          detail: {
+            message: 'Compare products from the same appliance category only.',
+          },
+        })
+      );
+      return;
+    }
+
+    if (result.status !== 'added') {
+      return;
+    }
+
     setInCompare(true);
 
     const compareCount = getCompareIds().length;

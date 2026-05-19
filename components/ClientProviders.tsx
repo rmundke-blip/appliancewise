@@ -7,7 +7,8 @@ import { X, GitCompare } from 'lucide-react';
 
 interface ToastData {
   id: string;
-  count: number;
+  count?: number;
+  message?: string;
 }
 
 function CompareToast({ toast, onClose }: { toast: ToastData; onClose: (id: string) => void }) {
@@ -37,11 +38,12 @@ function CompareToast({ toast, onClose }: { toast: ToastData; onClose: (id: stri
     };
   }, [handleClose]);
 
-  const remaining = toast.count === 1 ? 2 : 1;
-  const message =
-    toast.count === 1
-      ? `Add ${remaining} more products to compare`
-      : `Add ${remaining} more product to compare`;
+  const message = toast.message
+    ? toast.message
+    : toast.count === 1
+    ? 'Add 2 more products to compare'
+    : 'Add 1 more product to compare';
+  const hasCount = typeof toast.count === 'number';
 
   return (
     <>
@@ -73,29 +75,35 @@ function CompareToast({ toast, onClose }: { toast: ToastData; onClose: (id: stri
               <GitCompare size={14} className="text-[#00D4AA]" />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-1.5 mb-2">
-                {[1, 2, 3].map((slot) => (
-                  <div
-                    key={slot}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      slot <= toast.count ? 'w-5 bg-[#00D4AA]' : 'w-3 bg-[#30363D]'
-                    }`}
-                  />
-                ))}
-                <span className="text-[10px] text-[#8B949E] ml-1 font-medium">
-                  {toast.count}/3 added
-                </span>
-              </div>
-              <p className="text-[#E6EDF3] text-sm font-medium leading-snug">
-                {message},{' '}
-                <Link
-                  href="/compare"
-                  onClick={() => onClose(toast.id)}
-                  className="text-[#00D4AA] underline underline-offset-2 decoration-[#00D4AA]/40 hover:decoration-[#00D4AA] transition-all font-semibold"
-                >
-                  or click here to compare now
-                </Link>
-              </p>
+              {hasCount ? (
+                <>
+                  <div className="flex items-center gap-1.5 mb-2">
+                    {[1, 2, 3].map((slot) => (
+                      <div
+                        key={slot}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          slot <= (toast.count ?? 0) ? 'w-5 bg-[#00D4AA]' : 'w-3 bg-[#30363D]'
+                        }`}
+                      />
+                    ))}
+                    <span className="text-[10px] text-[#8B949E] ml-1 font-medium">
+                      {toast.count}/3 added
+                    </span>
+                  </div>
+                  <p className="text-[#E6EDF3] text-sm font-medium leading-snug">
+                    {message},{' '}
+                    <Link
+                      href="/compare"
+                      onClick={() => onClose(toast.id)}
+                      className="text-[#00D4AA] underline underline-offset-2 decoration-[#00D4AA]/40 hover:decoration-[#00D4AA] transition-all font-semibold"
+                    >
+                      or click here to compare now
+                    </Link>
+                  </p>
+                </>
+              ) : (
+                <p className="text-[#E6EDF3] text-sm font-medium leading-snug">{message}</p>
+              )}
             </div>
           </div>
         </div>
@@ -121,12 +129,19 @@ export default function ClientProviders() {
 
   useEffect(() => {
     const handler = (e: Event) => {
-      const { count } = (e as CustomEvent<{ count: number }>).detail;
-      if (count >= 3) {
-        router.push('/compare');
+      const detail = (e as CustomEvent<{ count?: number; message?: string }>).detail;
+      if (detail.message) {
+        setToasts([{ id: `toast-${Date.now()}`, message: detail.message }]);
         return;
       }
-      setToasts([{ id: `toast-${Date.now()}`, count }]);
+
+      if (detail.count !== undefined) {
+        if (detail.count >= 3) {
+          router.push('/compare');
+          return;
+        }
+        setToasts([{ id: `toast-${Date.now()}`, count: detail.count }]);
+      }
     };
     window.addEventListener('compare-toast', handler);
     return () => window.removeEventListener('compare-toast', handler);
